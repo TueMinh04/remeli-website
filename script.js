@@ -234,9 +234,9 @@ const translations = {
     merchantTitle: '<span>Sell out more easily</span><span>operate more lightly.</span>',
     merchantDescription: 'Remeli helps you sell good food left at the end of the day in a simple and efficient way.',
     merchantCta: 'Register your store',
-    merchantPointOne: 'Create end-of-day bags quickly',
+    merchantPointOne: 'Create orders easily',
     merchantPointTwo: 'Set quantity, price, and pickup time',
-    merchantPointThree: 'Customers reserve and pick up',
+    merchantPointThree: 'Customer reserve and pick up',
     merchantPointFour: 'Simple reports, easy tracking',
 
     communityEyebrow: 'Remeli community',

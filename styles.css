@@ -770,63 +770,106 @@ h3 {
   transform: translate(-50%, -50%);
 }
 
-.remeli-bag {
-  position: absolute;
-  left: 50%;
-  bottom: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 220px;
-  height: 238px;
-  padding: 46px 24px 26px;
-  border-radius: 20px 20px 34px 34px;
-  color: var(--white);
-  background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.18), transparent 32%),
-    linear-gradient(155deg, var(--green-700), var(--green-900) 68%);
-  box-shadow: 0 34px 90px rgba(16, 60, 41, 0.3);
-  transform: translateX(-50%) rotate(-3deg);
-  isolation: isolate;
+.remeli-bag{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:220px;
+
+    height:255px;
+
+    border-radius:18px 18px 32px 32px;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #4f9465 0%,
+        #2f6b47 55%,
+        #18452e 100%
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 35px 70px rgba(16,60,41,.28);
+}
+.remeli-bag::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+top:0;
+
+width:94%;
+
+height:18px;
+
+background:
+
+rgba(255,255,255,.18);
+
+border-radius:0 0 12px 12px;
+}
+.remeli-bag::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-18px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:150px;
+
+height:25px;
+
+background:
+
+rgba(0,0,0,.18);
+
+filter:blur(16px);
+
+border-radius:50%;
+
+z-index:-1;
 }
 
-.remeli-bag::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.16), transparent 35%, rgba(0, 0, 0, 0.18));
-  pointer-events: none;
-  z-index: -1;
-}
-
-.remeli-bag::after {
-  content: "";
-  position: absolute;
-  right: -24px;
-  top: 26px;
-  width: 58px;
-  height: 196px;
-  border-radius: 12px 18px 28px 10px;
-  background: linear-gradient(145deg, #245839, #0c2d1f);
-  transform: skewY(7deg);
-  z-index: -2;
-  box-shadow: 16px 22px 50px rgba(16, 60, 41, 0.22);
-}
-
-.bag-handle {
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  width: 116px;
-  height: 76px;
-  border: 8px solid rgba(255, 255, 255, 0.86);
-  border-bottom: 0;
-  border-radius: 70px 70px 0 0;
-  transform: translateX(-50%);
-  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.12));
+.bag-handle{
+    position:absolute;
+    left:50%;
+    top:-28px;
+    transform:translateX(-50%);
+    width:104px;
+    height:62px;
+    border:7px solid rgba(255,255,255,.95);
+    border-bottom:none;
+    border-radius:60px 60px 0 0;
+    box-sizing:border-box;
+    z-index:3;
 }
 
 .bag-logo {
