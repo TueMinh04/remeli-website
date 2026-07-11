@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Remeli giúp bạn tìm món ngon còn lại trong ngày từ cửa hàng địa phương tại Việt Nam, đặt trước dễ dàng và nhận tại cửa hàng." />
+  <title>Remeli | Món ngon còn đây, tiết kiệm trong tay</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <linearGradient id="googlePlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00a1ff" />
+        <stop offset="30%" stop-color="#00e765" />
+        <stop offset="70%" stop-color="#ffb300" />
+        <stop offset="100%" stop-color="#ff3a44" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Remeli trang chủ" data-i18n-aria-label="brandAria">
+      <img src="assets/remeli-logo.png" alt="Remeli logo" />
+      <span>Remeli</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false"
+      data-i18n-aria-label="menuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Menu chính" data-i18n-aria-label="mainMenu">
+      <a href="#home" class="active" data-i18n="navHome">Trang chủ</a>
+      <a href="#how-it-works" data-i18n="navHow">Cách hoạt động</a>
+      <a href="#merchant" data-i18n="navMerchant">Cửa hàng</a>
+      <a href="#impact" data-i18n="navImpact">Tác động</a>
+      <a href="#community" data-i18n="navCommunity">Cộng đồng</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-yellow btn-small" type="button" data-open-modal="waitlistModal" data-i18n="joinEarly">Tham
+        gia sớm</button>
+      <div class="language-toggle" aria-label="Đổi ngôn ngữ" data-i18n-aria-label="languageLabel">
+        <button class="lang-option active" type="button" data-lang-switch="vi" aria-pressed="true">VI</button>
+        <span>|</span>
+        <button class="lang-option" type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-line line-leaf-one" viewBox="0 0 160 160">
+          <path d="M29 92c42-69 94-67 111-35-27 10-53 22-79 46 24-12 46-19 67-21-30 35-72 39-99 10Z" />
+          <path d="M31 91c31-11 60-21 98-31" />
+        </svg>
+        <svg class="hero-line line-carrot" viewBox="0 0 160 160">
+          <path d="M66 37c22 19 37 52 43 93-42-6-72-21-93-43 15-24 30-39 50-50Z" />
+          <path
+            d="M96 32c14-21 27-27 39-25-5 14-12 25-28 35M91 35c-6-20-2-32 11-43 6 17 5 32-3 45M79 42c-16-16-22-30-18-45 14 7 25 19 29 38" />
+          <path d="M50 63h28M42 83h25M68 101h28" />
+        </svg>
+        <svg class="hero-line line-tomato" viewBox="0 0 160 160">
+          <path d="M77 48c29 0 52 22 52 51s-23 51-52 51-52-22-52-51 23-51 52-51Z" />
+          <path d="M76 51c-5-18 1-32 16-41M76 50c-14-5-26-14-34-29M76 50c17-10 30-11 44-1M76 50c-7-12-6-23 3-34" />
+        </svg>
+        <svg class="hero-line line-bag" viewBox="0 0 160 160">
+          <path d="M38 55h84l-7 83H45L38 55Z" />
+          <path d="M58 55c0-20 9-32 23-32s23 12 23 32" />
+          <path d="M68 91h25M68 111h38" />
+        </svg>
+        <div class="soft-blob blob-one"></div>
+        <div class="soft-blob blob-two"></div>
+        <div class="floating-leaf leaf-a"></div>
+        <div class="floating-leaf leaf-b"></div>
+        <div class="floating-leaf leaf-c"></div>
+        <div class="dot-field dots-a"></div>
+      </div>
+
+      <div class="hero-content reveal">
+        <h1 id="heroTitle" data-i18n="heroTitle"><span>Món ngon còn đây</span><span>Tiết kiệm trong tay</span></h1>
+        <p data-i18n="heroSubtitle">Save Food · Save Money · Save Tomorrow</p>
+        <div class="hero-buttons">
+          <button class="btn btn-yellow" type="button" data-open-modal="waitlistModal" data-i18n="waitlistButton">Tham
+            gia danh sách chờ</button>
+          <button class="btn btn-outline-light" type="button" data-open-modal="merchantModal"
+            data-i18n="merchantCta">Đăng ký cửa hàng</button>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#how-it-works" aria-label="Cuộn xuống phần cách hoạt động"
+        data-i18n-aria-label="scrollCue">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="marquee" aria-label="Danh mục món chạy ngang" data-i18n-aria-label="marqueeLabel">
+      <div class="marquee-track">
+        <span data-i18n="marqueeBakery">Tiệm bánh</span><i></i>
+        <span data-i18n="marqueeCafe">Quán cà phê</span><i></i>
+        <span data-i18n="marqueeMeal">Nhà hàng</span><i></i>
+        <span data-i18n="marqueeBanhMi">Siêu thị</span><i></i>
+        <span data-i18n="marqueeEat">Ăn ngon hơn</span><i></i>
+        <span data-i18n="marqueeSave">Tiết kiệm hơn</span><i></i>
+        <span data-i18n="marqueeLessWaste">Lãng phí ít hơn</span><i></i>
+        <span data-i18n="marqueeBakery">Tiệm bánh</span><i></i>
+        <span data-i18n="marqueeCafe">Quán cà phê</span><i></i>
+        <span data-i18n="marqueeMeal">Nhà hàng</span><i></i>
+        <span data-i18n="marqueeBanhMi">Siêu thị</span><i></i>
+        <span data-i18n="marqueeEat">Ăn ngon hơn</span><i></i>
+        <span data-i18n="marqueeSave">Tiết kiệm hơn</span><i></i>
+        <span data-i18n="marqueeLessWaste">Lãng phí ít hơn</span><i></i>
+        <span data-i18n="marqueeBakery">Tiệm bánh</span><i></i>
+        <span data-i18n="marqueeCafe">Quán cà phê</span><i></i>
+        <span data-i18n="marqueeMeal">Nhà hàng</span><i></i>
+        <span data-i18n="marqueeBanhMi">Siêu thị</span><i></i>
+        <span data-i18n="marqueeEat">Ăn ngon hơn</span><i></i>
+        <span data-i18n="marqueeSave">Tiết kiệm hơn</span><i></i>
+        <span data-i18n="marqueeLessWaste">Lãng phí ít hơn</span><i></i>
+        <span data-i18n="marqueeBakery">Tiệm bánh</span><i></i>
+        <span data-i18n="marqueeCafe">Quán cà phê</span><i></i>
+        <span data-i18n="marqueeMeal">Nhà hàng</span><i></i>
+        <span data-i18n="marqueeBanhMi">Siêu thị</span><i></i>
+        <span data-i18n="marqueeEat">Ăn ngon hơn</span><i></i>
+        <span data-i18n="marqueeSave">Tiết kiệm hơn</span><i></i>
+        <span data-i18n="marqueeLessWaste">Lãng phí ít hơn</span><i></i>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how-it-works">
+      <div class="section-grid section-grid-left">
+        <div class="section-copy reveal">
+          <span class="eyebrow" data-i18n="howEyebrow">Đơn giản & minh bạch</span>
+          <h2 class="split-title" data-i18n="howTitle"><span>Cách Remeli</span><span>hoạt động</span></h2>
+          <p class="balanced-two-line" data-i18n="howDescription"><span>Ba bước đơn giản để bạn ăn ngon
+              hơn,</span><span>tiết kiệm hơn và lãng phí ít hơn mỗi ngày.</span></p>
+          <button class="text-link link-button" type="button" data-open-modal="waitlistModal"><span
+              data-i18n="joinEarly">Tham gia sớm</span> <span>→</span></button>
+        </div>
+
+        <div class="steps-row">
+          <article class="step-card reveal">
+            <span class="step-number">01</span>
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 56s18-18.7 18-33A18 18 0 1 0 14 23c0 14.3 18 33 18 33Z" />
+                <circle cx="32" cy="23" r="7" />
+              </svg>
+            </div>
+            <h3 data-i18n="stepOneTitle">Tìm món gần bạn</h3>
+            <p data-i18n="stepOneText">Khám phá cửa hàng gần bạn đang có phần món ngon cuối ngày.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <span class="step-number">02</span>
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none">
+
+                <path d="M18 22H46L44 52H20L18 22Z" stroke="#397542" stroke-width="3" stroke-linejoin="round" />
+
+                <path d="M24 22V18C24 11 27 8 32 8C37 8 40 11 40 18V22" stroke="#397542" stroke-width="3"
+                  stroke-linecap="round" />
+
+                <path d="M27 37L31 41L39 31" stroke="#397542" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" />
+
+              </svg>
+            </div>
+            <h3 data-i18n="stepTwoTitle">Đặt trước</h3>
+            <p data-i18n="stepTwoText">Chọn gói/món phù hợp, xem giá, số lượng và thời gian nhận.</p>
+          </article>
+
+          <article class="step-card reveal">
+            <span class="step-number">03</span>
+            <div class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M13 28h38v26H13z" />
+                <path d="M10 20h44l-5 8H15l-5-8Z" />
+                <path d="M18 28v26M46 28v26M27 54V42h10v12" />
+                <path d="M20 12h24l6 8H14l6-8Z" />
+              </svg>
+            </div>
+            <h3 data-i18n="stepThreeTitle">Đến nhận</h3>
+            <p data-i18n="stepThreeText">Ghé cửa hàng trong khung giờ đã chọn và nhận món dễ dàng.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="merchant-section" id="merchant">
+      <div class="merchant-copy reveal">
+        <span class="eyebrow eyebrow-yellow" data-i18n="merchantEyebrow">Dành cho chủ cửa hàng</span>
+        <h2 class="split-title" data-i18n="merchantTitle"><span>Bán hết dễ dàng</span><span>vận hành nhẹ nhàng.</span>
+        </h2>
+        <p data-i18n="merchantDescription">Remeli giúp bạn bán phần món còn ngon trong ngày một cách đơn giản và hiệu
+          quả.</p>
+        <button class="btn btn-yellow" type="button" data-open-modal="merchantModal" data-i18n="merchantCta">Đăng ký cửa
+          hàng</button>
+      </div>
+
+      <div class="merchant-points">
+        <article class="merchant-point reveal">
+          <svg viewBox="0 0 64 64" fill="none">
+
+            <path d="M18 22H46L44 52H20L18 22Z" stroke="f7be00" stroke-width="3" stroke-linejoin="round" />
+
+            <path d="M24 22V18C24 11 27 8 32 8C37 8 40 11 40 18V22" stroke="f7be00" stroke-width="3"
+              stroke-linecap="round" />
+
+            <path d="M25 34H39" stroke="f7be00" stroke-width="3" stroke-linecap="round" />
+
+          </svg>
+          <h3 data-i18n="merchantPointOne">Tạo đơn dễ dàng</h3>
+        </article>
+        <article class="merchant-point reveal">
+          <svg viewBox="0 0 64 64">
+            <path d="M14 18h36M14 32h36M14 46h36" />
+            <circle cx="25" cy="18" r="5" />
+            <circle cx="42" cy="32" r="5" />
+            <circle cx="31" cy="46" r="5" />
+          </svg>
+          <h3 data-i18n="merchantPointTwo">Tự chọn số lượng, giá và giờ nhận</h3>
+        </article>
+        <article class="merchant-point reveal">
+          <svg viewBox="0 0 64 64">
+            <rect x="13" y="16" width="38" height="37" rx="4" />
+            <path d="M22 10v12M42 10v12M13 28h38" />
+            <path d="m24 42 5 5 12-13" />
+          </svg>
+          <h3 data-i18n="merchantPointThree">Khách đặt trước và đến nhận</h3>
+        </article>
+        <article class="merchant-point reveal">
+          <svg viewBox="0 0 64 64">
+            <path d="M16 48V20h32v28H16Z" />
+            <path d="M24 38h16M24 30h16M24 22h16" />
+            <path d="M12 52h40" />
+          </svg>
+          <h3 data-i18n="merchantPointFour">Báo cáo đơn giản, dễ theo dõi</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section food-cloud-section" id="impact" aria-labelledby="foodCloudTitle">
+      <div class="food-cloud-copy reveal">
+        <span class="eyebrow" data-i18n="foodEyebrow">Không chỉ là một món ngon</span>
+        <h2 id="foodCloudTitle" class="split-title" data-i18n="foodTitle"><span>Remeli mang đến</span><span>điều
+            gì?</span></h2>
+        <p data-i18n="foodDescription">Một lần đặt nhỏ có thể giúp bạn tiết kiệm, khám phá gần hơn và giảm lãng phí hơn.
+        </p>
+      </div>
+
+      <div class="food-cloud" id="foodCloud">
+        <article class="impact-card impact-card-one reveal">
+          <div class="mini-icon">$</div>
+          <h3 data-i18n="impactSaveTitle">Tiết kiệm</h3>
+          <p data-i18n="impactSaveText">Ăn ngon với mức giá dễ chịu hơn mỗi ngày.</p>
+        </article>
+
+        <article class="impact-card impact-card-two reveal">
+          <div class="mini-icon">♻</div>
+          <h3 data-i18n="impactEnvTitle">Bảo vệ môi trường</h3>
+          <p data-i18n="impactEnvText">Góp phần giảm lãng phí qua từng phần ăn được sử dụng.</p>
+        </article>
+
+        <article class="impact-card impact-card-three reveal">
+          <div class="mini-icon">⌕</div>
+          <h3 data-i18n="impactDiscoverTitle">Khám phá món mới</h3>
+          <p data-i18n="impactDiscoverText">Cơ hội trải nghiệm những quán ăn trước giờ bạn đã bỏ quên.</p>
+        </article>
+
+        <article class="impact-card impact-card-four reveal">
+          <div class="mini-icon">⌂</div>
+          <h3 data-i18n="impactLocalTitle">Hỗ trợ cửa hàng</h3>
+          <p data-i18n="impactLocalText">Giúp cửa hàng địa phương mang những món ngon đến với người tiêu dùng.</p>
+        </article>
+
+        <div class="bag-stage" aria-hidden="true">
+          <div class="food-item" data-x="-130" data-y="-120" data-r="-18"
+            style="color: #FF5A5F; font-size: 1.8rem; font-weight: 800;">-50%</div>
+          <div class="food-item" data-x="-60" data-y="-210" data-r="-6"
+            style="color: #00A699; font-size: 1.4rem; font-weight: 700;">VOUCHER</div>
+          <div class="food-item" data-x="40" data-y="-210" data-r="12"
+            style="color: #FC642D; font-size: 2.2rem; font-weight: 900;">%</div>
+          <div class="food-item" data-x="110" data-y="-140" data-r="20"
+            style="color: #FFB400; font-size: 1.6rem; font-weight: 800;">SALE</div>
+          <div class="food-item" data-x="-160" data-y="-50" data-r="-15"
+            style="color: #FF5A5F; font-size: 1.2rem; font-weight: 800; white-space: normal; text-align: center; line-height: 1.1;">LAST<br>CHANCE</div>
+          <div class="food-item" data-x="130" data-y="-40" data-r="25" style="font-size: 2rem;">🎟️</div>
+          <div class="spark spark-one">✦</div>
+          <div class="spark spark-two">✧</div>
+          <div class="spark spark-three">✦</div>
+          <img class="remeli-bag-img" src="assets/bag.png" alt="Remeli Bag" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section reason-section">
+      <div class="reason-visual reveal" aria-hidden="true">
+        <div class="logo-orbit">
+          <img src="assets/remeli-logo.png" alt="" />
+          <span class="orbit-dot dot-green">♧</span>
+          <span class="orbit-dot dot-yellow">♥</span>
+          <span class="orbit-dot dot-soft">✓</span>
+        </div>
+      </div>
+      <div class="reason-content reveal">
+        <span class="eyebrow" data-i18n="whyEyebrow">Remeli mang đến ảnh hưởng gì?</span>
+        <h2 class="single-line-title" data-i18n="whyTitle">Lựa chọn nhỏ, thay đổi lớn</h2>
+        <div class="benefits-list">
+          <article>
+            <div class="mini-icon">🍽️</div>
+            <h3 data-i18n="benefitSaveTitle">25K+</h3>
+            <p data-i18n="benefitSaveText">Rescue orders</p>
+          </article>
+          <article>
+            <div class="mini-icon">🌍</div>
+            <h3 data-i18n="benefitLocalTitle">8.4T</h3>
+            <p data-i18n="benefitLocalText">Ckg CO₂e prevented</p>
+          </article>
+          <article>
+            <div class="mini-icon">🥬</div>
+            <h3 data-i18n="benefitWasteTitle">15.2T</h3>
+            <p data-i18n="benefitWasteText">kg food saved</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div class="community-card reveal">
+        <div>
+          <span class="eyebrow" data-i18n="communityEyebrow">Cộng đồng Remeli</span>
+          <h2 data-i18n="communityTitle">Cùng giới thiệu những cửa hàng bạn yêu thích.</h2>
+          <p data-i18n="communityDescription">Một cửa hàng tốt đôi khi chỉ cần thêm một cách mới để gặp đúng khách hàng.
+          </p>
+        </div>
+        <button class="btn btn-dark" type="button" data-open-modal="storeModal" data-i18n="recommendStoreButton">Giới
+          thiệu cửa hàng</button>
+      </div>
+
+      <!-- Cấu trúc băng chuyền chuỗi xích di chuyển chậm vô tận -->
+      <div class="feedback-premium-container reveal">
+        <div class="feedback-marquee-track">
+
+          <!-- Chuỗi xích lượt 1 -->
+          <div class="feedback-card">
+            <div class="feedback-stars">★★★★★</div>
+            <p class="feedback-text" data-i18n="feedback1Text">"App siêu tiện lợi luôn! Mình hay canh giờ tối để đặt túi
+              bánh ngọt từ tiệm gần nhà, bánh vẫn siêu ngon mà giá giảm được một nửa, vừa tiết kiệm vừa đỡ phí đồ ăn."
+            </p>
+            <div class="feedback-user">
+              <div class="user-avatar">MH</div>
+              <div class="user-info">
+                <h4>Minh Hoàng</h4>
+                <span data-i18n="feedback1Role">Người dùng • TP. HCM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-card highlight-card">
+            <div class="feedback-stars">★★★★★</div>
+            <p class="feedback-text" data-i18n="feedback2Text">"Là sinh viên nên Remeli cứu rỗi ví tiền của mình rất
+              nhiều. Thao tác đặt trước trên app rồi tự ghé tiệm lấy rất nhanh gọn, chủ quán lại nhiệt tình nữa."</p>
+            <div class="feedback-user">
+              <div class="user-avatar">TL</div>
+              <div class="user-info">
+                <h4>Thùy Linh</h4>
+                <span data-i18n="feedback2Role">Sinh viên • Hà Nội</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-stars">★★★★★</div>
+            <p class="feedback-text" data-i18n="feedback3Text">"Từ ngày đăng ký bán phần ăn cuối ngày trên Remeli, quán
+              mình vừa giảm hẳn lượng đồ ăn thừa bỏ đi, lại vừa tiếp cận thêm được rất nhiều khách hàng mới trong khu
+              vực."</p>
+            <div class="feedback-user">
+              <div class="user-avatar">TM</div>
+              <div class="user-info">
+                <h4>Tiệm Bánh Mây</h4>
+                <span data-i18n="feedback3Role">Đối tác • Quận 3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chuỗi xích lượt 2 (Nhân đôi để tạo vòng lặp mượt mà không vết nối) -->
+          <div class="feedback-card">
+            <div class="feedback-stars">★★★★★</div>
+            <p class="feedback-text" data-i18n="feedback1Text">"App siêu tiện lợi luôn! Mình hay canh giờ tối để đặt túi
+              bánh ngọt từ tiệm gần nhà, bánh vẫn siêu ngon mà giá giảm được một nửa, vừa tiết kiệm vừa đỡ phí đồ ăn."
+            </p>
+            <div class="feedback-user">
+              <div class="user-avatar">MH</div>
+              <div class="user-info">
+                <h4>Minh Hoàng</h4>
+                <span data-i18n="feedback1Role">Người dùng • TP. HCM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-card highlight-card">
+            <div class="feedback-stars">★★★★★</div>
+            <p class="feedback-text" data-i18n="feedback2Text">"Là sinh viên nên Remeli cứu rỗi ví tiền của mình rất
+              nhiều. Thao tác đặt trước trên app rồi tự ghé tiệm lấy rất nhanh gọn, chủ quán lại nhiệt tình nữa."</p>
+            <div class="feedback-user">
+              <div class="user-avatar">TL</div>
+              <div class="user-info">
+                <h4>Thùy Linh</h4>
+                <span data-i18n="feedback2Role">Sinh viên • Hà Nội</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="feedback-stars">★★★★★</div>
+            <p class="feedback-text" data-i18n="feedback3Text">"Từ ngày đăng ký bán phần ăn cuối ngày trên Remeli, quán
+              mình vừa giảm hẳn lượng đồ ăn thừa bỏ đi, lại vừa tiếp cận thêm được rất nhiều khách hàng mới trong khu
+              vực."</p>
+            <div class="feedback-user">
+              <div class="user-avatar">TM</div>
+              <div class="user-info">
+                <h4>Tiệm Bánh Mây</h4>
+                <span data-i18n="feedback3Role">Đối tác • Quận 3</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="#home">
+        <img src="assets/remeli-logo.png" alt="Remeli logo" />
+        <span>Remeli</span>
+      </a>
+      <p data-i18n="footerSlogan">Món ngon còn đây, tiết kiệm trong tay.<br />Save Food. Save Money. Save Tomorrow.</p>
+
+      <div class="download-badges">
+        <a href="#" class="app-badge store-apple" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 384 512" class="icon-apple">
+            <path
+              d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-48.7-22.7-79.4-22.1-39.3.6-76 22.8-96.1 57.3-41.9 71.9-10.7 178.6 30 237.3 19.9 28.7 44 60.7 75 59.5 29.8-1.2 41.2-19.3 77.2-19.3 35.8 0 46.4 19.3 77.6 18.6 31.9-.6 53.1-29.3 72.8-58.1 23.5-34.1 33.1-67 33.6-68.7-1.2-.5-66.4-25.4-66.7-101.5zM297.1 84.4c17.4-21.1 29.2-50.5 26-80.1-25.4 1-56.1 16.9-74.3 38.2-16.2 18.8-30.4 48.6-26.6 77.4 28.4 2.2 57.4-14.4 74.9-35.5z" />
+          </svg>
+          <div class="badge-text">
+            <small>Download on the</small>
+            <strong>App Store</strong>
+          </div>
+        </a>
+
+        <a href="#" class="app-badge store-google" target="_blank" rel="noopener noreferrer">
+          <img src="assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play">
+        </a>
+      </div>
+
+      <div class="socials" style="margin-top: 20px;" aria-label="Mạng xã hội" data-i18n-aria-label="socialLabel">
+        <a href="https://www.facebook.com/profile.php?id=61591467995736" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook">
+          <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+            <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/remeli.vn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+            <path
+              d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.15-3.23 1.66-4.77 4.92-4.92 1.27-.06 1.64-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-4.27.2-6.6 2.52-6.8 6.8C.01 8.13 0 8.54 0 11.8s.01 3.67.07 4.95c.2 4.27 2.53 6.61 6.8 6.8 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.27-.2 6.61-2.53 6.8-6.8.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.27-2.53-6.61-6.8-6.8C15.67.01 15.26 0 12 0zm0 5.76a6.04 6.04 0 1 0 0 12.08 6.04 6.04 0 0 0 0-12.08zm0 10.12a4.07 4.07 0 1 1 0-8.14 4.07 4.07 0 0 1 0 8.14zm6.4-10.42a1.41 1.41 0 1 0 0-2.83 1.41 1.41 0 0 0 0 2.83z" />
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@remeli.vn" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+            <path
+              d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.01 1.63 4.14 1.03.9 2.36 1.35 3.71 1.42v3.39c-1.28-.02-2.54-.42-3.6-1.15-.31-.19-.61-.4-.89-.63v6.73c.03 2.22-1.12 4.31-3 5.42-2.11 1.19-4.78 1.12-6.81-.19-2.11-1.42-3.12-4.02-2.49-6.49.53-2.2 2.45-3.83 4.73-3.96v3.4c-.74.05-1.44.47-1.78 1.13-.48.97-.13 2.19.78 2.73.91.56 2.14.31 2.75-.54.27-.41.38-.9.34-1.39V.02z" />
+          </svg>
+        </a>
+        <a href="mailto:Remeli.vn@gmail.com" aria-label="Email">
+          <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h3 data-i18n="footerExplore">Khám phá</h3>
+        <a href="#home" data-i18n="navHome">Trang chủ</a>
+        <a href="#how-it-works" data-i18n="navHow">Cách hoạt động</a>
+        <a href="#merchant" data-i18n="navMerchant">Cửa hàng</a>
+        <a href="#impact" data-i18n="navImpact">Tác động</a>
+        <a href="#community" data-i18n="navCommunity">Cộng đồng</a>
+        <a href="faq.html" data-i18n="navFaq">FAQ</a>
+      </div>
+      <div>
+        <h3 data-i18n="footerLegal">Pháp lý</h3>
+        <a href="#" data-i18n="terms">Điều khoản sử dụng</a>
+        <a href="#" data-i18n="privacy">Chính sách bảo mật</a>
+        <a href="#" data-i18n="refund">Chính sách hoàn tiền</a>
+      </div>
+      <div>
+        <h3 data-i18n="footerContact">Liên hệ</h3>
+        <a href="mailto:Remeli.vn@gmail.com">Remeli.vn@gmail.com</a>
+        <a href="tel:19001234">1900 1234</a>
+        <span data-i18n="location">TP. Hồ Chí Minh, Việt Nam</span>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Remeli. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="waitlistModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-panel modal-panel-small" role="dialog" aria-modal="true" aria-labelledby="waitlistModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Đóng"
+        data-i18n-aria-label="closeModal">×</button>
+      <span class="eyebrow" data-i18n="waitlistEyebrow">Tham gia danh sách chờ</span>
+      <h2 id="waitlistModalTitle" data-i18n="waitlistModalTitle">Nhận thông tin sớm nhất từ Remeli</h2>
+      <p data-i18n="waitlistModalText">Để lại thông tin để Remeli báo cho bạn khi ra mắt tại thành phố của bạn.</p>
+      <form class="stacked-form" id="waitlistForm"
+        action="https://script.google.com/macros/s/AKfycbz02_CwynBXLxD4ofVWuuCcy0Z5YHeLYgymd5x6QaJ5G5QAr4hnDKX-C0Sxp8bsQAZKMg/exec"
+        method="POST" target="hidden_iframe">
+        <input type="hidden" name="formType" value="waitlist" />
+        <label>
+          <span data-i18n="emailLabel">Email của bạn</span>
+          <input type="email" name="email" />
+        </label>
+        <label>
+          <span data-i18n="cityLabel">Thành phố</span>
+          <select name="city" required>
+            <option value="" data-i18n="cityPlaceholder">Chọn thành phố</option>
+            <option>TP. Hồ Chí Minh</option>
+            <option data-i18n="cityHanoi">Hà Nội</option>
+            <option data-i18n="cityDanang">Đà Nẵng</option>
+            <option data-i18n="cityCantho">Cần Thơ</option>
+            <option data-i18n="cityOther">Khác</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="roleLabel">Bạn là?</span>
+          <select name="role" required>
+            <option value="" data-i18n="rolePlaceholder">Bạn là?</option>
+            <option data-i18n="roleUser">Người dùng</option>
+            <option data-i18n="roleMerchant">Chủ cửa hàng</option>
+            <option data-i18n="roleOther">Khác</option>
+          </select>
+        </label>
+        <button class="btn btn-green" type="submit" data-i18n="waitlistButton">Tham gia danh sách chờ</button>
+        <p class="form-message" id="waitlistMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="storeModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="storeModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Đóng"
+        data-i18n-aria-label="closeModal">×</button>
+      <h2 id="storeModalTitle" data-i18n="storeModalTitle">Giới thiệu cửa hàng</h2>
+      <p data-i18n="storeModalText">Biết một cửa hàng nên có mặt trên Remeli? Gửi thông tin để đội ngũ Remeli tìm hiểu
+        thêm.</p>
+      <form class="stacked-form"
+        action="https://script.google.com/macros/s/AKfycbz02_CwynBXLxD4ofVWuuCcy0Z5YHeLYgymd5x6QaJ5G5QAr4hnDKX-C0Sxp8bsQAZKMg/exec"
+        method="POST" target="hidden_iframe">
+        <input type="hidden" name="formType" value="store" />
+        <label>
+          <span data-i18n="storeNameLabel">Tên cửa hàng</span>
+          <input name="store_name" required placeholder="Ví dụ: Tiệm Bánh Mây"
+            data-i18n-placeholder="storeNamePlaceholder" />
+        </label>
+        <label>
+          <span data-i18n="storeAddressLabel">Khu vực / địa chỉ</span>
+          <input name="store_address" required placeholder="Ví dụ: Quận 3, TP. Hồ Chí Minh"
+            data-i18n-placeholder="storeAddressPlaceholder" />
+        </label>
+        <label>
+          <span data-i18n="foodTypeLabel">Loại món</span>
+          <input name="food_type" placeholder="Tiệm bánh, Quán cà phê, Siêu thị..."
+            data-i18n-placeholder="foodTypePlaceholder" />
+        </label>
+        <label>
+          <span data-i18n="emailLabel">Email của bạn</span>
+          <input type="email" name="email" />
+        </label>
+        <button class="btn btn-green" type="submit" data-i18n="sendRecommendation">Gửi giới thiệu</button>
+        <p class="form-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="merchantModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="merchantModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Đóng"
+        data-i18n-aria-label="closeModal">×</button>
+      <h2 id="merchantModalTitle" data-i18n="merchantModalTitle">Đăng ký cửa hàng</h2>
+      <p data-i18n="merchantModalText">Để lại thông tin, Remeli sẽ liên hệ khi bắt đầu onboarding cửa hàng.</p>
+      <form class="stacked-form"
+        action="https://script.google.com/macros/s/AKfycbz02_CwynBXLxD4ofVWuuCcy0Z5YHeLYgymd5x6QaJ5G5QAr4hnDKX-C0Sxp8bsQAZKMg/exec"
+        method="POST" target="hidden_iframe">
+        <input type="hidden" name="formType" value="merchant" />
+        <label><span data-i18n="storeNameLabel">Tên cửa hàng</span><input name="store_name" required
+            placeholder="Tên cửa hàng" data-i18n-placeholder="storeNameSimplePlaceholder" /></label>
+
+        <!-- 2. Tên người đại diện (MỚI) -->
+        <label><span data-i18n="representativeNameLabel">Tên người đại diện</span><input name="representative_name"
+            required placeholder="Nhập họ và tên" data-i18n-placeholder="representativeNamePlaceholder" /></label>
+
+        <!-- 3. Địa chỉ cửa hàng (MỚI) -->
+        <label><span data-i18n="storeAddressLabel">Địa chỉ cửa hàng</span><input name="store_address" required
+            placeholder="Số nhà, tên đường, quận/huyện..." data-i18n-placeholder="storeAddressPlaceholder" /></label>
+
+        <label><span data-i18n="businessTypeLabel">Loại hình</span>
+          <select name="business_type" required>
+            <option value="" data-i18n="businessTypePlaceholder">Chọn loại hình</option>
+            <option data-i18n="typeCafe">Tiệm cà phê</option>
+            <option data-i18n="typeBakery">Tiệm bánh</option>
+            <option data-i18n="typeFoodShop">Quán ăn</option>
+            <option data-i18n="typeRestaurant">Nhà hàng</option>
+            <option data-i18n="typeMiniMart">Siêu thị mini</option>
+            <option data-i18n="cityOther">Khác</option>
+          </select>
+        </label>
+        <label><span data-i18n="phoneLabel">Số điện thoại</span><input name="phone" required placeholder="" /></label>
+        <label><span data-i18n="emailShortLabel">Email</span><input type="email" name="email" required
+            placeholder="" /></label>
+        <button class="btn btn-green" type="submit" data-i18n="merchantSubmit">Gửi đăng ký</button>
+        <p class="form-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <iframe name="hidden_iframe" id="hiddenFormIframe" style="display:none;" title="form-submit-target"></iframe>
+
+  <script src="script.js"></script>
+  <!-- Code injected by live-server -->
+  <script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+</body>
+
+</html>

@@ -124,7 +124,6 @@ const translations = {
     waitlistModalText: 'Để lại thông tin để Remeli báo cho bạn khi ra mắt tại thành phố của bạn.',
     emailLabel: 'Email của bạn',
     emailShortLabel: 'Email',
-    emailPlaceholder: 'you@email.com',
     cityLabel: 'Thành phố',
     cityPlaceholder: 'Chọn thành phố',
     cityHanoi: 'Hà Nội',
@@ -150,6 +149,15 @@ const translations = {
     merchantModalTitle: 'Đăng ký cửa hàng',
     merchantModalText: 'Để lại thông tin, Remeli sẽ liên hệ khi bắt đầu onboarding cửa hàng.',
     storeNameSimplePlaceholder: 'Tên cửa hàng',
+
+    // Thêm ngôn ngữ cho Tên người đại diện
+    representativeNameLabel: 'Tên người đại diện',
+    representativeNamePlaceholder: 'Nhập họ và tên',
+
+    // Thêm ngôn ngữ cho Địa chỉ cửa hàng
+    storeAddressLabel: 'Địa chỉ cửa hàng',
+    storeAddressPlaceholder: 'Số nhà, tên đường, quận/huyện...',
+
     businessTypeLabel: 'Loại hình',
     businessTypePlaceholder: 'Chọn loại hình',
     typeCafe: 'Quán cà phê',
@@ -163,7 +171,14 @@ const translations = {
     waitlistSuccess: 'Bạn đã có trong danh sách chờ của Remeli.',
     demoSuccess: 'Đã gửi thông tin. Remeli sẽ liên hệ sớm.',
     formSending: 'Đang gửi...',
-    formError: 'Có lỗi xảy ra, vui lòng thử lại hoặc gửi email cho Remeli.'
+    formError: 'Có lỗi xảy ra, vui lòng thử lại hoặc gửi email cho Remeli.',
+
+    feedback1Text: '"App siêu tiện lợi luôn! Mình hay canh giờ tối để đặt túi bánh ngọt từ tiệm gần nhà, bánh vẫn siêu ngon mà giá giảm được một nửa, vừa tiết kiệm vừa đỡ phí đồ ăn."',
+    feedback1Role: 'Người dùng • TP. HCM',
+    feedback2Text: '"Là sinh viên nên Remeli cứu rỗi ví tiền của mình rất nhiều. Thao tác đặt trước trên app rồi tự ghé tiệm lấy rất nhanh gọn, chủ quán lại nhiệt tình nữa."',
+    feedback2Role: 'Sinh viên • Hà Nội',
+    feedback3Text: '"Từ ngày đăng ký bán phần ăn cuối ngày trên Remeli, quán mình vừa giảm hẳn lượng đồ ăn thừa bỏ đi, lại vừa tiếp cận thêm được rất nhiều khách hàng mới trong khu vực."',
+    feedback3Role: 'Đối tác • Quận 3'
   },
   en: {
     pageTitle: 'Remeli | Save Food · Save Money · Save Tomorrow',
@@ -306,6 +321,8 @@ const translations = {
     merchantModalTitle: 'Register your store',
     merchantModalText: 'Leave your details and Remeli will contact you when store onboarding begins.',
     storeNameSimplePlaceholder: 'Store name',
+    representativeNameLabel: 'Representative name',
+    representativeNamePlaceholder: 'Enter full name',
     businessTypeLabel: 'Business type',
     businessTypePlaceholder: 'Choose business type',
     typeCafe: 'Cafe',
@@ -319,7 +336,14 @@ const translations = {
     waitlistSuccess: 'You are now on Remeli’s waitlist.',
     demoSuccess: 'Submitted. Remeli will contact you soon.',
     formSending: 'Sending...',
-    formError: 'Something went wrong. Please try again or email Remeli directly.'
+    formError: 'Something went wrong. Please try again or email Remeli directly.',
+
+    feedback1Text: '"Super convenient app! I often order pastry bags from a nearby bakery in the evening. The cakes are still delicious at half price, which saves money and reduces food waste."',
+    feedback1Role: 'User • HCMC',
+    feedback2Text: '"As a student, Remeli saves my wallet a lot. Reserving ahead on the app and picking up at the store is very quick, and the store owners are so enthusiastic."',
+    feedback2Role: 'Student • Hanoi',
+    feedback3Text: '"Since registering to sell end-of-day food on Remeli, our shop has significantly reduced food waste and reached many new customers in the area."',
+    feedback3Role: 'Partner • District 3'
   }
 };
 
