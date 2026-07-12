@@ -18,7 +18,7 @@
   --radius-lg: 24px;
   --radius-md: 16px;
   --max: 1200px;
-  --display-font: "Anton", "Be Vietnam Pro", Arial, sans-serif;
+  --display-font: "Google Sans", "Be Vietnam Pro", Arial, sans-serif;
 }
 
 * {
@@ -420,8 +420,8 @@ h3 {
   gap: clamp(10px, 1.25vw, 18px);
   margin: 0;
   font-family: var(--display-font);
-  font-size: clamp(3.2rem, 7.6vw, 7.25rem);
-  font-weight: 400;
+  font-size: clamp(2.6rem, 6.2vw, 5.8rem);
+  font-weight: 800;
   line-height: 1.08;
   text-shadow: 0 20px 70px rgba(0, 0, 0, 0.24);
 }
@@ -433,8 +433,8 @@ h3 {
 .hero p {
   margin: clamp(28px, 3.2vw, 42px) 0 0;
   font-family: var(--display-font);
-  font-size: clamp(1.05rem, 2.15vw, 1.72rem);
-  font-weight: 400;
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-weight: 600;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.92);
 }
@@ -538,8 +538,8 @@ h3 {
 h2 {
   margin: 0;
   font-family: var(--display-font);
-  font-size: clamp(2.1rem, 4.45vw, 4.05rem);
-  font-weight: 400;
+  font-size: clamp(1.8rem, 3.6vw, 3.4rem);
+  font-weight: 800;
   line-height: 1.15;
 }
 
@@ -550,7 +550,7 @@ p {
 
 h3 {
   font-family: var(--display-font);
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.012em;
   line-height: 1.22;
 }
@@ -1389,6 +1389,16 @@ select {
   color: var(--text);
   outline: none;
   transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2314231a%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 12px auto;
+  padding-right: 40px;
 }
 
 input:focus,

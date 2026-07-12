@@ -124,6 +124,8 @@ const translations = {
     waitlistModalText: 'Để lại thông tin để Remeli báo cho bạn khi ra mắt tại thành phố của bạn.',
     emailLabel: 'Email của bạn',
     emailShortLabel: 'Email',
+    emailPlaceholder: 'name@gmail.com',
+    phonePlaceholder: '09xxxxxxxx',
     cityLabel: 'Thành phố',
     cityPlaceholder: 'Chọn thành phố',
     cityHanoi: 'Hà Nội',
@@ -131,7 +133,7 @@ const translations = {
     cityCantho: 'Cần Thơ',
     cityOther: 'Khác',
     roleLabel: 'Bạn là?',
-    rolePlaceholder: 'Bạn là?',
+    rolePlaceholder: 'Chọn',
     roleUser: 'Người dùng',
     roleMerchant: 'Chủ cửa hàng',
     roleOther: 'Khác',
@@ -172,6 +174,13 @@ const translations = {
     demoSuccess: 'Đã gửi thông tin. Remeli sẽ liên hệ sớm.',
     formSending: 'Đang gửi...',
     formError: 'Có lỗi xảy ra, vui lòng thử lại hoặc gửi email cho Remeli.',
+    successWaitlistTitle: 'Cảm ơn bạn đã quan tâm Remeli',
+    successWaitlistMessage: 'Remeli sẽ sớm liên hệ với bạn.',
+    successMerchantTitle: 'Cảm ơn bạn đã đăng ký với Remeli',
+    successMerchantMessage: 'Remeli sẽ sớm liên hệ với bạn.',
+    successStoreTitle: 'Cảm ơn bạn đã giới thiệu cửa hàng',
+    successStoreMessage: 'Remeli sẽ sớm xem xét và liên hệ với họ.',
+    returnHome: 'Trở về trang chủ',
 
     feedback1Text: '"App siêu tiện lợi luôn! Mình hay canh giờ tối để đặt túi bánh ngọt từ tiệm gần nhà, bánh vẫn siêu ngon mà giá giảm được một nửa, vừa tiết kiệm vừa đỡ phí đồ ăn."',
     feedback1Role: 'Người dùng • TP. HCM',
@@ -295,7 +304,8 @@ const translations = {
     waitlistModalText: 'Leave your details and Remeli will notify you when we launch in your city.',
     emailLabel: 'Your email',
     emailShortLabel: 'Email',
-    emailPlaceholder: 'you@email.com',
+    emailPlaceholder: 'name@gmail.com',
+    phonePlaceholder: '09xxxxxxxx',
     cityLabel: 'City',
     cityPlaceholder: 'Choose your city',
     cityHanoi: 'Hanoi',
@@ -303,7 +313,7 @@ const translations = {
     cityCantho: 'Can Tho',
     cityOther: 'Other',
     roleLabel: 'You are',
-    rolePlaceholder: 'You are',
+    rolePlaceholder: 'Selection',
     roleUser: 'Customer',
     roleMerchant: 'Store owner',
     roleOther: 'Other',
@@ -337,6 +347,13 @@ const translations = {
     demoSuccess: 'Submitted. Remeli will contact you soon.',
     formSending: 'Sending...',
     formError: 'Something went wrong. Please try again or email Remeli directly.',
+    successWaitlistTitle: 'Thank you for your interest in Remeli',
+    successWaitlistMessage: 'Remeli will contact you soon.',
+    successMerchantTitle: 'Thank you for registering with Remeli',
+    successMerchantMessage: 'Remeli will contact you soon.',
+    successStoreTitle: 'Thank you for your recommendation',
+    successStoreMessage: 'Remeli will review and contact them soon.',
+    returnHome: 'Return to home',
 
     feedback1Text: '"Super convenient app! I often order pastry bags from a nearby bakery in the evening. The cakes are still delicious at half price, which saves money and reduces food waste."',
     feedback1Role: 'User • HCMC',
@@ -516,7 +533,7 @@ document.addEventListener('keydown', event => {
 // Cấu hình lưu về hệ thống Google Sheet Web App của bạn
 const GOOGLE_SCRIPT_ENDPOINT = "https://script.google.com/macros/s/AKfycbz02_CwynBXLxD4ofVWuuCcy0Z5YHeLYgymd5x6QaJ5G5QAr4hnDKX-C0Sxp8bsQAZKMg/exec";
 
-function setupGoogleSheetForm(form, successKey) {
+function setupGoogleSheetForm(form, titleKey, messageKey) {
   if (!form) return;
 
   const messageEl = form.querySelector(".form-message");
@@ -532,19 +549,32 @@ function setupGoogleSheetForm(form, successKey) {
     setTimeout(() => {
       form.reset();
       if (submitBtn) submitBtn.disabled = false;
-      if (messageEl) messageEl.textContent = t(successKey);
+      if (messageEl) messageEl.textContent = "";
+      const currentModal = form.closest(".modal");
+      if (currentModal) closeModal(currentModal);
+      
+      const successTitleEl = document.getElementById("successModalTitle");
+      const successMessageEl = document.querySelector("#successModal p");
+      if (successTitleEl && successMessageEl) {
+        successTitleEl.dataset.i18n = titleKey;
+        successTitleEl.innerHTML = t(titleKey);
+        successMessageEl.dataset.i18n = messageKey;
+        successMessageEl.innerHTML = t(messageKey);
+      }
+      
+      openModal("successModal");
     }, 2000);
   });
 }
 
 // Kích hoạt nộp dữ liệu tự động cho cả 3 form 
-setupGoogleSheetForm(document.getElementById("waitlistForm"), "waitlistSuccess");
+setupGoogleSheetForm(document.getElementById("waitlistForm"), "successWaitlistTitle", "successWaitlistMessage");
 
 const storeForm = document.querySelector('input[value="store"]')?.closest('form');
-if (storeForm) setupGoogleSheetForm(storeForm, "demoSuccess");
+if (storeForm) setupGoogleSheetForm(storeForm, "successStoreTitle", "successStoreMessage");
 
 const merchantForm = document.querySelector('input[value="merchant"]')?.closest('form');
-if (merchantForm) setupGoogleSheetForm(merchantForm, "demoSuccess");
+if (merchantForm) setupGoogleSheetForm(merchantForm, "successMerchantTitle", "successMerchantMessage");
 
 let ticking = false;
 function onScroll() {

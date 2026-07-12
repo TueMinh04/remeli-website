@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -537,7 +537,7 @@
         <input type="hidden" name="formType" value="waitlist" />
         <label>
           <span data-i18n="emailLabel">Email của bạn</span>
-          <input type="email" name="email" />
+          <input type="email" name="email" placeholder="name@gmail.com" data-i18n-placeholder="emailPlaceholder" />
         </label>
         <label>
           <span data-i18n="cityLabel">Thành phố</span>
@@ -553,7 +553,7 @@
         <label>
           <span data-i18n="roleLabel">Bạn là?</span>
           <select name="role" required>
-            <option value="" data-i18n="rolePlaceholder">Bạn là?</option>
+            <option value="" data-i18n="rolePlaceholder">Chọn</option>
             <option data-i18n="roleUser">Người dùng</option>
             <option data-i18n="roleMerchant">Chủ cửa hàng</option>
             <option data-i18n="roleOther">Khác</option>
@@ -594,7 +594,7 @@
         </label>
         <label>
           <span data-i18n="emailLabel">Email của bạn</span>
-          <input type="email" name="email" />
+          <input type="email" name="email" placeholder="name@gmail.com" data-i18n-placeholder="emailPlaceholder" />
         </label>
         <button class="btn btn-green" type="submit" data-i18n="sendRecommendation">Gửi giới thiệu</button>
         <p class="form-message"></p>
@@ -639,14 +639,25 @@
           </select>
         </label>
 
-        <label><span data-i18n="phoneLabel">Số điện thoại</span><input name="phone" required placeholder="" /></label>
+        <label><span data-i18n="phoneLabel">Số điện thoại</span><input name="phone" required placeholder="09xxxxxxxx" data-i18n-placeholder="phonePlaceholder" /></label>
         <label><span data-i18n="emailShortLabel">Email</span><input type="email" name="email" required
-            placeholder="" /></label>
+            placeholder="name@gmail.com" data-i18n-placeholder="emailPlaceholder" /></label>
         <button class="btn btn-green" type="submit" data-i18n="merchantSubmit">Gửi đăng ký</button>
         <p class="form-message"></p>
       </form>
     </div>
   </div>
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-panel modal-panel-small" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Đóng" data-i18n-aria-label="closeModal">×</button>
+      <div style="text-align: center; padding: 20px 0;">
+        <div style="font-size: 3rem; margin-bottom: 16px;">✨</div>
+        <h2 id="successModalTitle" data-i18n="successTitle" style="font-size: 1.5rem; margin-bottom: 12px;">Cảm ơn bạn đã quan tâm Remeli</h2>
+        <p data-i18n="successMessage" style="color: var(--muted); margin-bottom: 24px;">Remeli sẽ sớm liên hệ với bạn.</p>
+        <button class="btn btn-green" type="button" data-close-modal data-i18n="returnHome" style="width: 100%;">Trở về trang chủ</button>
+      </div>
+    </div>
   </div>
 
   <iframe name="hidden_iframe" id="hiddenFormIframe" style="display:none;" title="form-submit-target"></iframe>
