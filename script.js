@@ -31,6 +31,16 @@ const translations = {
     waitlistButton: 'Tham gia danh sách chờ',
     recommendStoreButton: 'Giới thiệu cửa hàng',
 
+    megaApp: 'App',
+    megaDownloadApp: 'Hướng dẫn tải App',
+    megaHowToPickup: 'Làm sao để pick up',
+    megaAboutUs: 'About us',
+    megaAboutRemeli: 'About Remeli',
+    megaOurTeam: 'Our team',
+    megaCommunity: 'Community',
+    megaImpact: 'Tác động',
+    megaCustomerFeedback: 'Phản hồi khách hàng',
+
     heroTitle: '<span>Món ngon còn đây</span><span>Tiết kiệm trong tay</span>',
     heroSubtitle: 'Save Food · Save Money · Save Tomorrow',
 
@@ -210,6 +220,16 @@ const translations = {
     joinEarly: 'Join early',
     waitlistButton: 'Join the waitlist',
     recommendStoreButton: 'Recommend a store',
+
+    megaApp: 'App',
+    megaDownloadApp: 'How to download App',
+    megaHowToPickup: 'How to pick up',
+    megaAboutUs: 'About us',
+    megaAboutRemeli: 'About Remeli',
+    megaOurTeam: 'Our team',
+    megaCommunity: 'Community',
+    megaImpact: 'Impact',
+    megaCustomerFeedback: 'Customer feedback',
 
     heroTitle: '<span>Good food finds</span><span> Good people</span>',
     heroSubtitle: 'Save Food · Save Money · Save Tomorrow',

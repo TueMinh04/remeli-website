@@ -18,7 +18,7 @@
   --radius-lg: 24px;
   --radius-md: 16px;
   --max: 1200px;
-  --display-font: "Google Sans", "Be Vietnam Pro", Arial, sans-serif;
+  --display-font: "Be Vietnam Pro", Arial, sans-serif;
 }
 
 * {
@@ -108,10 +108,10 @@ svg {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: clamp(14px, 2.4vw, 76px);
   font-size: clamp(0.72rem, 0.6rem + 0.55vw, 0.95rem);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .main-nav a {
@@ -137,6 +137,110 @@ svg {
 .main-nav a.active::after,
 .main-nav a:hover::after {
   transform: scaleX(1);
+}
+
+.nav-item-with-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.mega-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: -16px;
+  transform: translateY(10px);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  padding: 32px 40px;
+  display: flex;
+  gap: 64px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background: transparent;
+}
+
+.site-header.scrolled .mega-menu {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.site-header:not(.scrolled) .mega-menu {
+  background: rgba(20, 35, 26, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+.nav-item-with-dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mega-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: max-content;
+}
+
+.mega-menu-column h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--green-900);
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: max-content;
+}
+
+.site-header:not(.scrolled) .mega-menu-column h4 {
+  color: var(--yellow);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.mega-menu-column a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0 !important;
+  opacity: 1 !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-header:not(.scrolled) .mega-menu-column a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mega-menu-column a::after {
+  display: none !important;
+}
+
+.mega-menu-column a:hover {
+  color: var(--green-700);
+  transform: translateX(4px);
+}
+
+.site-header:not(.scrolled) .mega-menu-column a:hover {
+  color: var(--yellow);
 }
 
 .header-actions {
@@ -420,7 +524,7 @@ h3 {
   gap: clamp(10px, 1.25vw, 18px);
   margin: 0;
   font-family: var(--display-font);
-  font-size: clamp(2.6rem, 6.2vw, 5.8rem);
+  font-size: clamp(2.9rem, 6.8vw, 6.4rem);
   font-weight: 800;
   line-height: 1.08;
   text-shadow: 0 20px 70px rgba(0, 0, 0, 0.24);
@@ -428,6 +532,7 @@ h3 {
 
 .hero h1 span {
   display: block;
+  white-space: nowrap;
 }
 
 .hero p {
@@ -1139,9 +1244,14 @@ h3 {
 }
 
 .feedback-premium-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   margin-top: 60px;
   overflow: hidden;
-  position: relative;
   padding: 10px 0;
 }
 
@@ -1851,6 +1961,39 @@ details p {
     gap: 6px;
     padding-top: 16px;
     font-size: 1rem;
+  }
+
+  .nav-item-with-dropdown {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mega-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none !important;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 0 16px 16px;
+    background: transparent !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .nav-item-with-dropdown:hover .mega-menu,
+  .nav-item-with-dropdown:active .mega-menu {
+    display: flex;
+  }
+
+  .mega-menu-column h4 {
+    font-size: 0.9rem;
   }
 
   .site-header.menu-open .header-actions {
