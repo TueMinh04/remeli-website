@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="faq-page">
+<body class="">
   <svg style="display: none;">
     <defs>
       <linearGradient id="googlePlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -56,7 +56,16 @@
           </div>
         </div>
       </div>
-      <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
+      <div class="nav-item-with-dropdown">
+        <a href="vi-sao-gia-nhap.html" data-i18n="navMerchant">Doanh nghiệp</a>
+        <div class="mega-menu">
+          <div class="mega-menu-column">
+            <h4>Dành cho Doanh nghiệp</h4>
+            <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+            <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div class="header-actions">
@@ -69,14 +78,55 @@
     </div>
   </header>
 
-  <section class="faq-section" id="content">
-    <div class="faq-header reveal">
-      <span class="eyebrow eyebrow-yellow">Dành cho chủ cửa hàng</span>
-      <h2>Cửa hàng</h2>
+  <section class="hero" id="home" style="min-height: 70vh; background: var(--green-900); color: var(--white); overflow: hidden; position: relative;">
+    <div class="hero-bg" aria-hidden="true">
+      <div style="position: absolute; top: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,195,121,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,200,67,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+      
+      <svg class="hero-line line-leaf-one" style="opacity: 0.5;" viewBox="0 0 160 160">
+        <path d="M29 92c42-69 94-67 111-35-27 10-53 22-79 46 24-12 46-19 67-21-30 35-72 39-99 10Z" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <svg class="hero-line line-bag" style="opacity: 0.5; top: 70%; left: 80%;" viewBox="0 0 160 160">
+        <path d="M38 55h84l-7 83H45L38 55Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M58 55c0-20 9-32 23-32s23 12 23 32" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      
+      <div class="glass-layer"></div>
     </div>
 
-    <div class="faq-list reveal" style="text-align: center; padding: 60px 0; background: var(--white); border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 14px 42px rgba(16, 60, 41, 0.06);">
-      <p style="color: var(--muted); font-size: 1.1rem; margin: 0;">Nội dung đang được cập nhật. Vui lòng quay lại sau!</p>
+    <div class="hero-content reveal" style="padding-top: 140px; text-align: center; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 10;">
+      <span class="eyebrow eyebrow-yellow" style="margin: 0 auto 16px;">Đăng ký doanh nghiệp</span>
+      <h1 style="font-size: 3.6rem; font-family: var(--display-font); line-height: 1.1; margin-bottom: 24px; text-transform: uppercase;">Trở thành đối tác<br/><span style="color: var(--yellow);">cùng Remeli</span></h1>
+      <p style="margin: 0 auto 40px; max-width: 700px; font-size: 1.25rem; opacity: 0.9; line-height: 1.6;">Hãy để lại thông tin, chúng tôi sẽ giúp bạn biến thức ăn cuối ngày thành nguồn doanh thu mới ngay hôm nay.</p>
+    </div>
+  </section>
+
+
+
+  <!-- Registration Form Area -->
+  <section id="dang-ki" style="padding: 160px 24px; background: var(--white);">
+    <div style="max-width: 900px; margin: 0 auto;" class="reveal">
+      <div style="background: var(--green-900); border-radius: 48px; padding: 80px 60px; color: var(--white); text-align: center; box-shadow: 0 32px 80px rgba(16, 60, 41, 0.15); display: flex; flex-direction: column; align-items: center;">
+        <h2 style="font-size: 3.2rem; margin-bottom: 24px; font-family: var(--display-font); line-height: 1.2;">Đăng ký cửa hàng</h2>
+        <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 48px; max-width: 600px; line-height: 1.7;">Để lại thông tin, đội ngũ Remeli sẽ liên hệ hỗ trợ bạn thiết lập gian hàng chỉ trong vòng 24 giờ. Hoàn toàn miễn phí đăng ký!</p>
+        
+        <!-- A mock form -->
+        <form style="width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 24px; text-align: left;">
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-size: 1.15rem; color: var(--yellow-soft); font-weight: 500;">Tên cửa hàng *</label>
+            <input type="text" placeholder="Nhập tên quán ăn, nhà hàng, tiệm bánh..." style="width: 100%; padding: 20px 24px; border-radius: 16px; border: none; font-size: 1.15rem; font-family: inherit; outline: none; background: #fff;" />
+          </div>
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-size: 1.15rem; color: var(--yellow-soft); font-weight: 500;">Số điện thoại *</label>
+            <input type="tel" placeholder="Nhập số điện thoại liên hệ..." style="width: 100%; padding: 20px 24px; border-radius: 16px; border: none; font-size: 1.15rem; font-family: inherit; outline: none; background: #fff;" />
+          </div>
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-size: 1.15rem; color: var(--yellow-soft); font-weight: 500;">Khu vực (Thành phố/Quận) *</label>
+            <input type="text" placeholder="Ví dụ: Quận 1, TP.HCM..." style="width: 100%; padding: 20px 24px; border-radius: 16px; border: none; font-size: 1.15rem; font-family: inherit; outline: none; background: #fff;" />
+          </div>
+          <button type="button" class="btn btn-yellow" style="margin-top: 16px; font-size: 1.25rem; padding: 20px; border-radius: 16px; border: none; cursor: pointer; font-family: inherit; font-weight: 700;">Gửi thông tin đăng ký</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -122,13 +172,16 @@
     </div>
     <div class="footer-links">
       <div>
-        <h3 data-i18n="footerExplore">Khám phá</h3>
+                <h3 data-i18n="footerExplore">Khám phá</h3>
         <a href="index.html#home" data-i18n="navHome">Trang chủ</a>
         <a href="index.html#how-it-works" data-i18n="navHow">Cách hoạt động</a>
-        <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
         <a href="index.html#impact" data-i18n="navImpact">Tác động</a>
         <a href="index.html#community" data-i18n="navCommunity">Cộng đồng</a>
         <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        
+        <h4 style="margin-top: 20px; margin-bottom: 8px; color: var(--white); font-weight: 700; font-size: 1.1rem;">Doanh nghiệp</h4>
+        <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+        <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
       </div>
       <div>
         <h3 data-i18n="footerLegal">Pháp lý</h3>

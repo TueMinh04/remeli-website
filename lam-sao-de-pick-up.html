@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="faq-page">
+<body class="">
   <svg style="display: none;">
     <defs>
       <linearGradient id="googlePlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -23,7 +23,7 @@
     </defs>
   </svg>
 
-  <header class="site-header" id="siteHeader">
+  <header class="site-header header-light-bg" id="siteHeader">
     <a class="brand" href="index.html" aria-label="Remeli trang chủ" data-i18n-aria-label="brandAria">
       <img src="assets/remeli-logo.png" alt="Remeli logo" />
       <span>Remeli</span>
@@ -56,7 +56,16 @@
           </div>
         </div>
       </div>
-      <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
+      <div class="nav-item-with-dropdown">
+        <a href="vi-sao-gia-nhap.html" data-i18n="navMerchant">Doanh nghiệp</a>
+        <div class="mega-menu">
+          <div class="mega-menu-column">
+            <h4>Dành cho Doanh nghiệp</h4>
+            <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+            <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div class="header-actions">
@@ -69,14 +78,89 @@
     </div>
   </header>
 
-  <section class="faq-section" id="content">
-    <div class="faq-header reveal">
-      <span class="eyebrow eyebrow-yellow">App</span>
-      <h2>Làm sao để pick up</h2>
+  <section class="pickup-process" style="padding: 140px 24px 100px; background: var(--green-100); min-height: 80vh;">
+    
+    <div class="section-grid section-grid-left reveal" style="max-width: 1200px; margin: 0 auto 100px; align-items: center;">
+      <div class="section-copy" style="text-align: left;">
+        <span class="eyebrow" style="color: var(--green-800); background: var(--white); box-shadow: 0 4px 12px rgba(16, 60, 41, 0.05);">Trải nghiệm nhận hàng</span>
+        <h1 class="split-title" style="color: var(--green-900); justify-content: flex-start; margin-top: 24px; font-size: 3.8rem; line-height: 1.1;"><span>Hướng dẫn</span><span>Pick up</span></h1>
+        <p style="color: var(--green-900); max-width: 600px; margin: 24px 0 0; font-size: 1.3rem; opacity: 0.9;">Thực hiện 4 bước đơn giản sau để nhận ngay phần ăn tuyệt hảo tại cửa hàng.</p>
+      </div>
+      <div class="section-visual">
+        <div style="width: 100%; aspect-ratio: 4/3; background: var(--white); border-radius: 32px; border: 2px dashed var(--green-400); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--green-700); font-size: 1.2rem; box-shadow: 0 24px 48px rgba(16, 60, 41, 0.04);">
+          [Hình ảnh minh hoạ Pick up]
+        </div>
+      </div>
     </div>
 
-    <div class="faq-list reveal" style="text-align: center; padding: 60px 0; background: var(--white); border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 14px 42px rgba(16, 60, 41, 0.06);">
-      <p style="color: var(--muted); font-size: 1.1rem; margin: 0;">Nội dung đang được cập nhật. Vui lòng quay lại sau!</p>
+    <!-- The Seamless Container -->
+    <div style="background: var(--white); border-radius: 48px; max-width: 1000px; margin: 0 auto; padding: 60px 40px; border: 1px solid rgba(107, 195, 121, 0.15); box-shadow: 0 24px 80px rgba(16, 60, 41, 0.04); position: relative;" class="reveal">
+      
+      <!-- Center vertical line for desktop -->
+      <div class="timeline-line-center" style="position: absolute; top: 100px; bottom: 100px; left: 50%; transform: translateX(-50%); width: 3px; background: linear-gradient(180deg, var(--green-400), var(--green-100)); opacity: 0.3; border-radius: 4px;"></div>
+
+      <style>
+        .process-step { display: flex; align-items: center; margin-bottom: 50px; position: relative; z-index: 1; }
+        .process-step:last-child { margin-bottom: 0; }
+        .process-step .step-content { flex: 1; background: var(--white); padding: 36px 32px; border-radius: 28px; box-shadow: 0 16px 40px rgba(16, 60, 41, 0.04); border: 1px solid var(--line); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .process-step .step-content:hover { transform: translateY(-4px); box-shadow: 0 24px 50px rgba(16, 60, 41, 0.08); border-color: var(--green-400); }
+        .process-step .step-icon { width: 56px; height: 56px; background: var(--yellow); color: var(--green-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; font-family: var(--display-font); border: 6px solid #f2f9f3; margin: 0 40px; flex-shrink: 0; box-shadow: 0 8px 24px rgba(16,60,41,0.06); }
+        .process-step .empty-space { flex: 1; }
+        
+        .process-step:nth-child(odd) .step-content { text-align: right; }
+        .process-step:nth-child(even) { flex-direction: row-reverse; }
+        .process-step:nth-child(even) .step-content { text-align: left; }
+
+        @media (max-width: 768px) {
+          .timeline-line-center { left: 40px; transform: none; }
+          .process-step, .process-step:nth-child(even) { flex-direction: column; align-items: flex-start; margin-bottom: 30px; }
+          .process-step .step-icon { margin: 0 0 16px 8px; border-width: 4px; width: 48px; height: 48px; font-size: 1.2rem; }
+          .process-step .empty-space { display: none; }
+          .process-step .step-content, .process-step:nth-child(odd) .step-content { text-align: left; width: 100%; padding: 28px 24px; }
+          .pickup-process > div:nth-child(2) { padding: 40px 24px; }
+        }
+      </style>
+
+      <!-- Step 1 -->
+      <div class="process-step">
+        <div class="step-content">
+          <h3 style="color: var(--green-900); font-size: 1.35rem; margin-bottom: 12px;">Đặt & Thanh toán</h3>
+          <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.05rem;">Click chọn phần ăn bạn yêu thích và tiến hành thanh toán an toàn ngay trên ứng dụng.</p>
+        </div>
+        <div class="step-icon">1</div>
+        <div class="empty-space"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step">
+        <div class="step-content">
+          <h3 style="color: var(--green-900); font-size: 1.35rem; margin-bottom: 12px;">Xem địa chỉ & Hướng dẫn</h3>
+          <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.05rem;">Hệ thống sẽ hiện chi tiết địa chỉ cùng các hướng dẫn nhận món trực tiếp từ cửa hàng.</p>
+        </div>
+        <div class="step-icon">2</div>
+        <div class="empty-space"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="step-content">
+          <h3 style="color: var(--green-900); font-size: 1.35rem; margin-bottom: 12px;">Mở mã QR trên App</h3>
+          <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.05rem;">Khi đến cửa hàng, bạn chỉ cần mở ứng dụng và chuẩn bị sẵn mã QR xác nhận đơn hàng.</p>
+        </div>
+        <div class="step-icon">3</div>
+        <div class="empty-space"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step">
+        <div class="step-content">
+          <h3 style="color: var(--green-900); font-size: 1.35rem; margin-bottom: 12px;">Scan QR & Nhận món</h3>
+          <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.05rem;">Đưa mã QR cho nhân viên cửa hàng scan để hoàn tất việc xác nhận và mang món ngon về.</p>
+        </div>
+        <div class="step-icon">4</div>
+        <div class="empty-space"></div>
+      </div>
+
     </div>
   </section>
 
@@ -122,13 +206,16 @@
     </div>
     <div class="footer-links">
       <div>
-        <h3 data-i18n="footerExplore">Khám phá</h3>
+                <h3 data-i18n="footerExplore">Khám phá</h3>
         <a href="index.html#home" data-i18n="navHome">Trang chủ</a>
         <a href="index.html#how-it-works" data-i18n="navHow">Cách hoạt động</a>
-        <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
         <a href="index.html#impact" data-i18n="navImpact">Tác động</a>
         <a href="index.html#community" data-i18n="navCommunity">Cộng đồng</a>
         <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        
+        <h4 style="margin-top: 20px; margin-bottom: 8px; color: var(--white); font-weight: 700; font-size: 1.1rem;">Doanh nghiệp</h4>
+        <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+        <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
       </div>
       <div>
         <h3 data-i18n="footerLegal">Pháp lý</h3>

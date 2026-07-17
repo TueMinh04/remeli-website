@@ -23,7 +23,7 @@ const translations = {
 
     navHome: 'Trang chủ',
     navHow: 'Cách hoạt động',
-    navMerchant: 'Cửa hàng',
+    navMerchant: 'Doanh nghiệp',
     navImpact: 'Tác động',
     navCommunity: 'Cộng đồng',
     navFaq: 'FAQ',
@@ -31,13 +31,13 @@ const translations = {
     waitlistButton: 'Tham gia danh sách chờ',
     recommendStoreButton: 'Giới thiệu cửa hàng',
 
-    megaApp: 'App',
-    megaDownloadApp: 'Hướng dẫn tải App',
-    megaHowToPickup: 'Làm sao để pick up',
-    megaAboutUs: 'About us',
-    megaAboutRemeli: 'About Remeli',
-    megaOurTeam: 'Our team',
-    megaCommunity: 'Community',
+    megaApp: 'Ứng dụng',
+    megaDownloadApp: 'Hướng dẫn tải Remeli',
+    megaHowToPickup: 'Hướng dẫn nhận hàng',
+    megaAboutUs: 'Về chúng tôi',
+    megaAboutRemeli: 'Về Remeli',
+    megaOurTeam: 'Nhóm chúng tôi',
+    megaCommunity: 'Cộng đồng',
     megaImpact: 'Tác động',
     megaCustomerFeedback: 'Phản hồi khách hàng',
 
@@ -213,7 +213,7 @@ const translations = {
 
     navHome: 'Home',
     navHow: 'How it works',
-    navMerchant: 'For stores',
+    navMerchant: 'Business',
     navImpact: 'Impact',
     navCommunity: 'Community',
     navFaq: 'FAQ',

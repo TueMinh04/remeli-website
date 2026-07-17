@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="faq-page">
+<body class="">
   <svg style="display: none;">
     <defs>
       <linearGradient id="googlePlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -56,7 +56,16 @@
           </div>
         </div>
       </div>
-      <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
+      <div class="nav-item-with-dropdown">
+        <a href="vi-sao-gia-nhap.html" data-i18n="navMerchant">Doanh nghiệp</a>
+        <div class="mega-menu">
+          <div class="mega-menu-column">
+            <h4>Dành cho Doanh nghiệp</h4>
+            <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+            <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div class="header-actions">
@@ -69,14 +78,160 @@
     </div>
   </header>
 
-  <section class="faq-section" id="content">
-    <div class="faq-header reveal">
-      <span class="eyebrow eyebrow-yellow">Community</span>
-      <h2>Phản hồi khách hàng</h2>
+  <section class="hero" id="home" style="min-height: 70vh;">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-line line-leaf-one" viewBox="0 0 160 160">
+        <path d="M29 92c42-69 94-67 111-35-27 10-53 22-79 46 24-12 46-19 67-21-30 35-72 39-99 10Z" />
+        <path d="M31 91c31-11 60-21 98-31" />
+      </svg>
+      <svg class="hero-line line-carrot" viewBox="0 0 160 160">
+        <path d="M66 37c22 19 37 52 43 93-42-6-72-21-93-43 15-24 30-39 50-50Z" />
+        <path
+          d="M96 32c14-21 27-27 39-25-5 14-12 25-28 35M91 35c-6-20-2-32 11-43 6 17 5 32-3 45M79 42c-16-16-22-30-18-45 14 7 25 19 29 38" />
+        <path d="M50 63h28M42 83h25M68 101h28" />
+      </svg>
+      <svg class="hero-line line-tomato" viewBox="0 0 160 160">
+        <path d="M77 48c29 0 52 22 52 51s-23 51-52 51-52-22-52-51 23-51 52-51Z" />
+        <path d="M76 51c-5-18 1-32 16-41M76 50c-14-5-26-14-34-29M76 50c17-10 30-11 44-1M76 50c-7-12-6-23 3-34" />
+      </svg>
+      <svg class="hero-line line-bag" viewBox="0 0 160 160">
+        <path d="M38 55h84l-7 83H45L38 55Z" />
+        <path d="M58 55c0-20 9-32 23-32s23 12 23 32" />
+        <path d="M68 91h25M68 111h38" />
+      </svg>
+
+      <div class="soft-blob blob-one"></div>
+      <div class="soft-blob blob-two"></div>
+
+      <div class="floating-leaf leaf-a"></div>
+      <div class="floating-leaf leaf-b"></div>
+      <div class="floating-leaf leaf-c"></div>
+
+      <div class="glass-layer"></div>
     </div>
 
-    <div class="faq-list reveal" style="text-align: center; padding: 60px 0; background: var(--white); border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 14px 42px rgba(16, 60, 41, 0.06);">
-      <p style="color: var(--muted); font-size: 1.1rem; margin: 0;">Nội dung đang được cập nhật. Vui lòng quay lại sau!</p>
+    <div class="hero-content reveal"
+      style="padding-top: 100px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <span class="eyebrow eyebrow-yellow" style="margin: 0 auto 16px;">Cộng đồng Remeli</span>
+      <h1 class="split-title" style="justify-content: center; font-size: 3.5rem;"><span>Tiếng nói từ</span><span>Người dùng</span></h1>
+      <p style="margin: 24px auto; max-width: 800px; font-size: 1.15rem; opacity: 0.9;">Khám phá những trải nghiệm chân thực nhất từ hàng ngàn khách hàng và đối tác đã đồng hành cùng Remeli trên hành trình chống lãng phí.</p>
+    </div>
+  </section>
+
+  <!-- Feedbacks Grid -->
+  <section style="padding: 160px 24px; background: var(--white); text-align: left;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      
+      <div style="text-align: center; margin-bottom: 80px;" class="reveal">
+        <h2 style="color: var(--green-900); font-size: 2.8rem; margin: 24px 0;">Cảm nhận thực tế</h2>
+      </div>
+
+      <style>
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 80px; }
+        .testimonial-card { background: #fbfdfc; border-radius: 40px; padding: 56px 48px; border: 1px solid rgba(107, 195, 121, 0.15); box-shadow: 0 16px 40px rgba(16, 60, 41, 0.03); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .testimonial-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(16, 60, 41, 0.08); border-color: var(--green-400); }
+        .testimonial-card.highlight { background: var(--green-100); border-color: transparent; }
+        .testimonial-stars { color: var(--yellow); font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 24px; }
+        .testimonial-text { color: var(--green-900); font-size: 1.25rem; line-height: 1.8; flex: 1; margin-bottom: 40px; font-style: italic; }
+        .testimonial-user { display: flex; align-items: center; gap: 20px; border-top: 1px solid rgba(16, 60, 41, 0.1); padding-top: 32px; }
+        .testimonial-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--green-800); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.4rem; }
+        .testimonial-info strong { display: block; color: var(--green-900); font-size: 1.2rem; margin-bottom: 6px; }
+        .testimonial-info span { color: var(--muted); font-size: 1rem; }
+      </style>
+
+      <div class="testimonial-grid reveal">
+        
+        <!-- FB 1 -->
+        <div class="testimonial-card highlight">
+          <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.6); border-radius: 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--green-700); border: 2px dashed rgba(107, 195, 121, 0.4);">[Ảnh túi mù bánh ngọt]</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <h3 style="color: var(--green-900); font-size: 1.45rem; margin-bottom: 16px; font-weight: 700;">Bí kíp ăn ngon, giá hời!</h3>
+          <p class="testimonial-text">"App siêu tiện lợi luôn! Mình hay canh giờ tối để đặt túi mù từ tiệm bánh yêu thích. Vừa được ăn ngon, vừa tiết kiệm được kha khá tiền, cảm giác bóc quà bất ngờ lắm!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">T</div>
+            <div class="testimonial-info">
+              <strong>Thảo Nguyễn</strong>
+              <span>Người dùng • TP. HCM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FB 2 -->
+        <div class="testimonial-card">
+          <div style="width: 100%; height: 200px; background: #f0f4f1; border-radius: 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--green-700); border: 2px dashed var(--green-400);">[Ảnh bữa ăn sinh viên]</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <h3 style="color: var(--green-900); font-size: 1.45rem; margin-bottom: 16px; font-weight: 700;">Cứu cánh cuối tháng</h3>
+          <p class="testimonial-text">"Là sinh viên nên Remeli cứu rỗi ví tiền của mình rất nhiều. Thức ăn vẫn còn rất nóng hổi và chất lượng, hy vọng app mở rộng thêm nhiều cửa hàng gần trường mình hơn."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">H</div>
+            <div class="testimonial-info">
+              <strong>Hoàng Hải</strong>
+              <span>Sinh viên • Hà Nội</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FB 3 -->
+        <div class="testimonial-card">
+          <div style="width: 100%; height: 200px; background: #f0f4f1; border-radius: 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--green-700); border: 2px dashed var(--green-400);">[Ảnh quán cơm tấm]</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <h3 style="color: var(--green-900); font-size: 1.45rem; margin-bottom: 16px; font-weight: 700;">Giải pháp chống lãng phí</h3>
+          <p class="testimonial-text">"Từ ngày đăng ký bán phần ăn cuối ngày trên Remeli, quán tôi không còn phải bỏ mứa đồ ăn nữa. Doanh thu tăng nhẹ nhưng vui nhất là không lãng phí công sức nấu nướng."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">C</div>
+            <div class="testimonial-info">
+              <strong>Cơm Tấm Mười</strong>
+              <span>Đối tác • Quận 3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FB 4 -->
+        <div class="testimonial-card">
+          <div style="width: 100%; height: 200px; background: #f0f4f1; border-radius: 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--green-700); border: 2px dashed var(--green-400);">[Ảnh thiên nhiên xanh]</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <h3 style="color: var(--green-900); font-size: 1.45rem; margin-bottom: 16px; font-weight: 700;">Hành động nhỏ, ý nghĩa lớn</h3>
+          <p class="testimonial-text">"Thật tuyệt vời khi được chung tay bảo vệ môi trường mỗi ngày chỉ bằng những bữa ăn ngon. Thiết kế app cực kỳ dễ thương và dễ sử dụng!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">M</div>
+            <div class="testimonial-info">
+              <strong>Mai Lan</strong>
+              <span>Người dùng • Đà Nẵng</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FB 5 -->
+        <div class="testimonial-card highlight">
+          <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.6); border-radius: 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--green-700); border: 2px dashed rgba(107, 195, 121, 0.4);">[Ảnh nhận món tại quầy]</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <h3 style="color: var(--green-900); font-size: 1.45rem; margin-bottom: 16px; font-weight: 700;">Tiện lợi, mượt mà</h3>
+          <p class="testimonial-text">"Tính năng pick-up của app hoạt động cực kỳ mượt mà. Mình tan làm ghé ngang cửa hàng, chỉ cần đưa mã quét là nhận đồ ngay, không phải chờ đợi phút nào."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">P</div>
+            <div class="testimonial-info">
+              <strong>Phan Anh</strong>
+              <span>Nhân viên văn phòng • TP.HCM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FB 6 -->
+        <div class="testimonial-card">
+          <div style="width: 100%; height: 200px; background: #f0f4f1; border-radius: 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--green-700); border: 2px dashed var(--green-400);">[Ảnh tiệm bánh ngọt]</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <h3 style="color: var(--green-900); font-size: 1.45rem; margin-bottom: 16px; font-weight: 700;">Niềm vui người thợ bánh</h3>
+          <p class="testimonial-text">"Không còn đau đầu vì bánh tồn kho mỗi tối, tôi cảm thấy rất biết ơn đội ngũ Remeli đã tạo ra một nền tảng thực sự ý nghĩa cho xã hội."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">L</div>
+            <div class="testimonial-info">
+              <strong>Lò Bánh Tươi</strong>
+              <span>Chủ tiệm bánh • Hà Nội</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -122,13 +277,16 @@
     </div>
     <div class="footer-links">
       <div>
-        <h3 data-i18n="footerExplore">Khám phá</h3>
+                <h3 data-i18n="footerExplore">Khám phá</h3>
         <a href="index.html#home" data-i18n="navHome">Trang chủ</a>
         <a href="index.html#how-it-works" data-i18n="navHow">Cách hoạt động</a>
-        <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
         <a href="index.html#impact" data-i18n="navImpact">Tác động</a>
         <a href="index.html#community" data-i18n="navCommunity">Cộng đồng</a>
         <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        
+        <h4 style="margin-top: 20px; margin-bottom: 8px; color: var(--white); font-weight: 700; font-size: 1.1rem;">Doanh nghiệp</h4>
+        <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+        <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
       </div>
       <div>
         <h3 data-i18n="footerLegal">Pháp lý</h3>

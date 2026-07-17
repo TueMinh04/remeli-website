@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="faq-page">
+<body class="">
   <svg style="display: none;">
     <defs>
       <linearGradient id="googlePlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -56,7 +56,16 @@
           </div>
         </div>
       </div>
-      <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
+      <div class="nav-item-with-dropdown">
+        <a href="vi-sao-gia-nhap.html" data-i18n="navMerchant">Doanh nghiệp</a>
+        <div class="mega-menu">
+          <div class="mega-menu-column">
+            <h4>Dành cho Doanh nghiệp</h4>
+            <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+            <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div class="header-actions">
@@ -69,14 +78,143 @@
     </div>
   </header>
 
-  <section class="faq-section" id="content">
-    <div class="faq-header reveal">
-      <span class="eyebrow eyebrow-yellow">Community</span>
-      <h2>Tác động</h2>
+  <section class="hero" id="home" style="min-height: 70vh;">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-line line-leaf-one" viewBox="0 0 160 160">
+        <path d="M29 92c42-69 94-67 111-35-27 10-53 22-79 46 24-12 46-19 67-21-30 35-72 39-99 10Z" />
+        <path d="M31 91c31-11 60-21 98-31" />
+      </svg>
+      <svg class="hero-line line-carrot" viewBox="0 0 160 160">
+        <path d="M66 37c22 19 37 52 43 93-42-6-72-21-93-43 15-24 30-39 50-50Z" />
+        <path
+          d="M96 32c14-21 27-27 39-25-5 14-12 25-28 35M91 35c-6-20-2-32 11-43 6 17 5 32-3 45M79 42c-16-16-22-30-18-45 14 7 25 19 29 38" />
+        <path d="M50 63h28M42 83h25M68 101h28" />
+      </svg>
+      <svg class="hero-line line-tomato" viewBox="0 0 160 160">
+        <path d="M77 48c29 0 52 22 52 51s-23 51-52 51-52-22-52-51 23-51 52-51Z" />
+        <path d="M76 51c-5-18 1-32 16-41M76 50c-14-5-26-14-34-29M76 50c17-10 30-11 44-1M76 50c-7-12-6-23 3-34" />
+      </svg>
+      <svg class="hero-line line-bag" viewBox="0 0 160 160">
+        <path d="M38 55h84l-7 83H45L38 55Z" />
+        <path d="M58 55c0-20 9-32 23-32s23 12 23 32" />
+        <path d="M68 91h25M68 111h38" />
+      </svg>
+
+      <div class="soft-blob blob-one"></div>
+      <div class="soft-blob blob-two"></div>
+
+      <div class="floating-leaf leaf-a"></div>
+      <div class="floating-leaf leaf-b"></div>
+      <div class="floating-leaf leaf-c"></div>
+
+      <div class="glass-layer"></div>
     </div>
 
-    <div class="faq-list reveal" style="text-align: center; padding: 60px 0; background: var(--white); border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 14px 42px rgba(16, 60, 41, 0.06);">
-      <p style="color: var(--muted); font-size: 1.1rem; margin: 0;">Nội dung đang được cập nhật. Vui lòng quay lại sau!</p>
+    <div class="hero-content reveal"
+      style="padding-top: 100px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <span class="eyebrow eyebrow-yellow" style="margin: 0 auto 16px;">Tác động của Remeli</span>
+      <h1 class="split-title" style="justify-content: center; font-size: 4rem;"><span>Lựa chọn nhỏ</span><span>Thay đổi lớn</span></h1>
+      <p style="margin: 24px auto; max-width: 800px; font-size: 1.25rem; opacity: 0.9;">Hành động tuy nhỏ bé của bạn đang từng bước tạo ra những tác động khổng lồ, góp phần bảo vệ hành tinh xanh của chúng ta.</p>
+    </div>
+  </section>
+
+  <!-- Big Numbers Section -->
+  <section style="padding: 160px 24px; background: var(--green-100); text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;" class="reveal">
+        
+        <!-- Stat 1 -->
+        <div style="background: var(--white); border-radius: 48px; padding: 60px 40px; box-shadow: 0 24px 60px rgba(16, 60, 41, 0.04); border: 1px solid rgba(107, 195, 121, 0.1);">
+          <div style="font-size: 4rem; margin-bottom: 24px;">🍽️</div>
+          <div style="color: var(--green-900); font-size: 5.5rem; font-weight: 800; font-family: var(--display-font); line-height: 1; letter-spacing: -2px;">25K+</div>
+          <h3 style="color: var(--green-800); font-size: 1.4rem; margin-top: 24px;">Phần ăn được giải cứu</h3>
+          <p style="color: var(--muted); margin-top: 16px; font-size: 1.1rem; line-height: 1.6;">Hàng chục ngàn bữa ăn ngon miệng đã đến tay người dùng kịp thời thay vì kết thúc tại bãi rác.</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div style="background: var(--white); border-radius: 48px; padding: 60px 40px; box-shadow: 0 24px 60px rgba(16, 60, 41, 0.04); border: 1px solid rgba(107, 195, 121, 0.1);">
+          <div style="font-size: 4rem; margin-bottom: 24px;">🌍</div>
+          <div style="color: var(--yellow); font-size: 5.5rem; font-weight: 800; font-family: var(--display-font); line-height: 1; letter-spacing: -2px;">8.4T</div>
+          <h3 style="color: var(--green-800); font-size: 1.4rem; margin-top: 24px;">CO₂e được ngăn chặn</h3>
+          <p style="color: var(--muted); margin-top: 16px; font-size: 1.1rem; line-height: 1.6;">Lượng khí thải carbon tương đương (CO₂e) khổng lồ được cắt giảm từ việc ngăn chặn rác thải.</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div style="background: var(--white); border-radius: 48px; padding: 60px 40px; box-shadow: 0 24px 60px rgba(16, 60, 41, 0.04); border: 1px solid rgba(107, 195, 121, 0.1);">
+          <div style="font-size: 4rem; margin-bottom: 24px;">🥬</div>
+          <div style="color: var(--green-900); font-size: 5.5rem; font-weight: 800; font-family: var(--display-font); line-height: 1; letter-spacing: -2px;">15.2T</div>
+          <h3 style="color: var(--green-800); font-size: 1.4rem; margin-top: 24px;">kg thức ăn được cứu</h3>
+          <p style="color: var(--muted); margin-top: 16px; font-size: 1.1rem; line-height: 1.6;">15.2 Tấn (tương đương 15,200 kg) nguyên liệu tươi ngon đã không bị lãng phí vô ích.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Info Section -->
+  <section style="padding: 160px 24px 200px; background: var(--white);">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;" class="reveal">
+      <span class="eyebrow" style="background: var(--yellow-soft); color: var(--green-900); box-shadow: 0 4px 12px rgba(16, 60, 41, 0.04);">Tầm nhìn bền vững</span>
+      <h2 style="color: var(--green-900); font-size: 3.2rem; margin: 32px 0; line-height: 1.2;">Mỗi phần ăn được cứu<br/>là một bước tiến vì Trái Đất</h2>
+      <p style="color: var(--muted); font-size: 1.3rem; line-height: 1.9; margin: 0 auto; max-width: 860px;">Lãng phí thực phẩm không chỉ là bài toán về kinh tế mà còn là gánh nặng khổng lồ đối với môi trường. Khi thức ăn bị vứt bỏ, toàn bộ năng lượng và nguồn tài nguyên nước dùng để gieo trồng, thu hoạch, vận chuyển và đóng gói cũng đều biến mất. Bằng việc đồng hành cùng Remeli, bạn đang góp phần vào một chuỗi cung ứng thực phẩm tuần hoàn, nơi mọi giá trị đều được trân trọng và Trái Đất được giảm tải áp lực.</p>
+    </div>
+  </section>
+
+  <!-- Detailed Impact Blocks -->
+  <section style="padding: 0 24px 100px; background: var(--white);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <!-- Block 1: Environment -->
+      <div class="section-grid section-grid-left" style="align-items: center; margin-bottom: 120px;">
+        <div class="section-copy reveal" style="padding-right: 40px;">
+          <span class="eyebrow" style="background: var(--green-100); color: var(--green-900);">Tác động Môi trường</span>
+          <h2 class="split-title" style="color: var(--green-900); margin-top: 24px;"><span>Giảm thiểu</span><span>Khí nhà kính</span></h2>
+          <p style="color: var(--muted); margin-top: 20px; font-size: 1.15rem; line-height: 1.7;">Thực phẩm khi bị chôn lấp sẽ sinh ra lượng lớn khí methane - loại khí gây hiệu ứng nhà kính mạnh gấp 25 lần so với CO₂. Bằng việc cứu lấy thức ăn, chúng ta trực tiếp ngăn chặn sự nóng lên toàn cầu và bảo vệ bầu không khí trong lành cho thế hệ tương lai.</p>
+        </div>
+        <div class="section-visual reveal">
+          <div style="width: 100%; aspect-ratio: 4/3; background: #f4f9f5; border-radius: 40px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--green-400); color: var(--green-700); font-weight: bold; font-size: 1.2rem;">
+            [Hình ảnh Thiên nhiên]
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 2: Economy (Reversed visually using dir) -->
+      <div class="section-grid section-grid-left" style="align-items: center; margin-bottom: 120px; direction: rtl;">
+        <div class="section-copy reveal" style="padding-right: 40px; direction: ltr; text-align: left;">
+          <span class="eyebrow" style="background: var(--yellow-soft); color: var(--green-900);">Tác động Kinh tế</span>
+          <h2 class="split-title" style="color: var(--green-900); justify-content: flex-start; margin-top: 24px;"><span>Tối ưu hoá</span><span>Nguồn lực</span></h2>
+          <p style="color: var(--muted); margin-top: 20px; font-size: 1.15rem; line-height: 1.7;">Mọi nguyên liệu, nhân công và năng lượng để sản xuất ra một món ăn đều đáng giá. Remeli giúp các doanh nghiệp và nhà hàng thu hồi được chi phí sản xuất, đồng thời mang đến cho người tiêu dùng những bữa ăn chất lượng với mức giá vô cùng hợp lý.</p>
+        </div>
+        <div class="section-visual reveal" style="direction: ltr;">
+          <div style="width: 100%; aspect-ratio: 4/3; background: #fffcf2; border-radius: 40px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--yellow); color: var(--green-800); font-weight: bold; font-size: 1.2rem;">
+            [Hình ảnh Kinh tế/Cửa hàng]
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 3: Social -->
+      <div class="section-grid section-grid-left" style="align-items: center;">
+        <div class="section-copy reveal" style="padding-right: 40px;">
+          <span class="eyebrow" style="background: var(--green-100); color: var(--green-900);">Tác động Xã hội</span>
+          <h2 class="split-title" style="color: var(--green-900); margin-top: 24px;"><span>Gắn kết</span><span>Cộng đồng</span></h2>
+          <p style="color: var(--muted); margin-top: 20px; font-size: 1.15rem; line-height: 1.7;">Không chỉ dừng lại ở việc mua bán, Remeli đang xây dựng một cộng đồng những người tiêu dùng có ý thức trách nhiệm cao. Chúng ta kết nối với nhau, với cửa hàng địa phương bằng một thông điệp tích cực: Sống xanh, tiêu dùng thông minh và trân trọng thức ăn.</p>
+        </div>
+        <div class="section-visual reveal">
+          <div style="width: 100%; aspect-ratio: 4/3; background: #f4f9f5; border-radius: 40px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--green-400); color: var(--green-700); font-weight: bold; font-size: 1.2rem;">
+            [Hình ảnh Cộng đồng]
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section style="padding: 140px 24px; background: var(--green-900); text-align: center; color: var(--white);">
+    <div style="max-width: 800px; margin: 0 auto;" class="reveal">
+      <h2 style="font-size: 3.5rem; margin-bottom: 24px; font-family: var(--display-font); line-height: 1.1;">Trở thành một phần<br/>của giải pháp</h2>
+      <p style="font-size: 1.25rem; opacity: 0.9; margin: 0 auto 40px; max-width: 600px; line-height: 1.7;">Tải Remeli ngay hôm nay để bắt đầu hành trình giải cứu thức ăn và bảo vệ môi trường cùng hàng chục ngàn người Việt Nam khác.</p>
+      <a href="huong-dan-tai-app.html" class="btn btn-yellow" style="font-size: 1.15rem; padding: 20px 48px; border-radius: 999px;">Tải Ứng Dụng Ngay</a>
     </div>
   </section>
 
@@ -122,13 +260,16 @@
     </div>
     <div class="footer-links">
       <div>
-        <h3 data-i18n="footerExplore">Khám phá</h3>
+                <h3 data-i18n="footerExplore">Khám phá</h3>
         <a href="index.html#home" data-i18n="navHome">Trang chủ</a>
         <a href="index.html#how-it-works" data-i18n="navHow">Cách hoạt động</a>
-        <a href="cua-hang.html" data-i18n="navMerchant">Cửa hàng</a>
         <a href="index.html#impact" data-i18n="navImpact">Tác động</a>
         <a href="index.html#community" data-i18n="navCommunity">Cộng đồng</a>
         <a href="faq.html" data-i18n="navFaq">FAQ</a>
+        
+        <h4 style="margin-top: 20px; margin-bottom: 8px; color: var(--white); font-weight: 700; font-size: 1.1rem;">Doanh nghiệp</h4>
+        <a href="vi-sao-gia-nhap.html">Vì sao gia nhập Remeli</a>
+        <a href="dang-ki-doanh-nghiep.html">Đăng ký doanh nghiệp</a>
       </div>
       <div>
         <h3 data-i18n="footerLegal">Pháp lý</h3>

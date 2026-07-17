@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Remeli giúp bạn tìm món ngon còn lại trong ngày từ cửa hàng địa phương tại Việt Nam, đặt trước dễ dàng và nhận tại cửa hàng." />
-  <title>Remeli | About Remeli</title>
+  <title>Remeli | Cửa hàng</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,93 +78,128 @@
     </div>
   </header>
 
-  <section class="hero" id="home" style="min-height: 70vh;">
+  <section class="hero" id="home" style="min-height: 70vh; background: var(--green-900); color: var(--white); overflow: hidden; position: relative;">
     <div class="hero-bg" aria-hidden="true">
-      <svg class="hero-line line-leaf-one" viewBox="0 0 160 160">
-        <path d="M29 92c42-69 94-67 111-35-27 10-53 22-79 46 24-12 46-19 67-21-30 35-72 39-99 10Z" />
-        <path d="M31 91c31-11 60-21 98-31" />
+      <div style="position: absolute; top: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(107,195,121,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,200,67,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+      
+      <svg class="hero-line line-leaf-one" style="opacity: 0.5;" viewBox="0 0 160 160">
+        <path d="M29 92c42-69 94-67 111-35-27 10-53 22-79 46 24-12 46-19 67-21-30 35-72 39-99 10Z" fill="none" stroke="currentColor" stroke-width="2"/>
       </svg>
-      <svg class="hero-line line-carrot" viewBox="0 0 160 160">
-        <path d="M66 37c22 19 37 52 43 93-42-6-72-21-93-43 15-24 30-39 50-50Z" />
-        <path
-          d="M96 32c14-21 27-27 39-25-5 14-12 25-28 35M91 35c-6-20-2-32 11-43 6 17 5 32-3 45M79 42c-16-16-22-30-18-45 14 7 25 19 29 38" />
-        <path d="M50 63h28M42 83h25M68 101h28" />
+      <svg class="hero-line line-bag" style="opacity: 0.5; top: 70%; left: 80%;" viewBox="0 0 160 160">
+        <path d="M38 55h84l-7 83H45L38 55Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M58 55c0-20 9-32 23-32s23 12 23 32" fill="none" stroke="currentColor" stroke-width="2"/>
       </svg>
-      <svg class="hero-line line-tomato" viewBox="0 0 160 160">
-        <path d="M77 48c29 0 52 22 52 51s-23 51-52 51-52-22-52-51 23-51 52-51Z" />
-        <path d="M76 51c-5-18 1-32 16-41M76 50c-14-5-26-14-34-29M76 50c17-10 30-11 44-1M76 50c-7-12-6-23 3-34" />
-      </svg>
-      <svg class="hero-line line-bag" viewBox="0 0 160 160">
-        <path d="M38 55h84l-7 83H45L38 55Z" />
-        <path d="M58 55c0-20 9-32 23-32s23 12 23 32" />
-        <path d="M68 91h25M68 111h38" />
-      </svg>
-
-      <div class="soft-blob blob-one"></div>
-      <div class="soft-blob blob-two"></div>
-
-      <div class="floating-leaf leaf-a"></div>
-      <div class="floating-leaf leaf-b"></div>
-      <div class="floating-leaf leaf-c"></div>
-
+      
       <div class="glass-layer"></div>
     </div>
 
-    <div class="hero-content reveal"
-      style="padding-top: 100px; text-align: center; display: flex; flex-direction: column; align-items: center;">
-      <span class="eyebrow eyebrow-yellow" style="margin: 0 auto 16px;">Về chúng tôi</span>
-      <h1 class="split-title" style="justify-content: center;"><span>Câu chuyện</span><span>Remeli</span></h1>
-      <p style="margin: 24px auto; max-width: 800px; font-size: 1.15rem; opacity: 0.9;">Hành trình kết nối những bữa ăn ngon với sứ mệnh giảm thiểu lãng phí và bảo vệ môi trường Việt Nam.</p>
+    <div class="hero-content reveal" style="padding-top: 140px; text-align: center; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 10;">
+      <span class="eyebrow eyebrow-yellow" style="margin: 0 auto 16px;">Dành cho đối tác</span>
+      <h1 style="font-size: 3.6rem; font-family: var(--display-font); line-height: 1.1; margin-bottom: 24px; text-transform: uppercase;">Mở rộng kinh doanh,<br/><span style="color: var(--yellow);">Giảm thiểu lãng phí</span></h1>
+      <p style="margin: 0 auto 40px; max-width: 700px; font-size: 1.25rem; opacity: 0.9; line-height: 1.6;">Đồng hành cùng Remeli để biến lượng thức ăn dư thừa cuối ngày thành nguồn doanh thu mới và thu hút thêm lượng lớn khách hàng tiềm năng.</p>
+      <a href="#dang-ki" class="btn btn-yellow" style="font-size: 1.2rem; padding: 20px 48px; border-radius: 999px;">Đăng ký đối tác ngay</a>
     </div>
   </section>
 
-  <!-- Vision Section -->
-  <section style="padding: 160px 24px; background: var(--white); text-align: center;">
-    <div style="max-width: 900px; margin: 0 auto;" class="reveal">
-      <span class="eyebrow" style="background: var(--green-100); color: var(--green-800);">Ý tưởng khởi nguồn</span>
-      <h2 style="color: var(--green-900); font-size: 2.8rem; margin: 24px 0; font-family: var(--display-font); line-height: 1.2;">Cứu lấy thức ăn, bảo vệ Trái Đất</h2>
-      <p style="color: var(--muted); font-size: 1.25rem; line-height: 1.8; margin-top: 24px;">Tại Việt Nam, hàng tấn thức ăn hoàn toàn ngon lành bị lãng phí mỗi ngày chỉ vì chưa tìm được người dùng kịp thời. Remeli ra đời với một khát vọng đơn giản: tạo ra một nền tảng kết nối các cửa hàng thực phẩm với những người yêu ẩm thực, giúp <strong>cứu lấy những bữa ăn ngon</strong>, tiết kiệm chi phí, và quan trọng nhất là <strong>giảm thiểu lượng khí thải carbon</strong> gây hiệu ứng nhà kính từ rác thải thực phẩm.</p>
-    </div>
-  </section>
-
-  <!-- Impact/Values Cards -->
-  <section style="padding: 100px 24px 160px; background: var(--green-100);">
-    <div style="max-width: 1200px; margin: 0 auto;">
+  <!-- Vì sao gia nhập -->
+  <section id="vi-sao-gia-nhap" style="padding: 200px 24px; background: var(--green-100);">
+    <div style="max-width: 1400px; margin: 0 auto;">
       
-      <div style="text-align: center; margin-bottom: 80px;" class="reveal">
-        <h2 class="split-title" style="color: var(--green-900); justify-content: center;"><span>Vì sao Remeli</span><span>ra đời?</span></h2>
+      <div style="text-align: center; margin-bottom: 120px;" class="reveal">
+        <span class="eyebrow" style="background: var(--white); color: var(--green-900); box-shadow: 0 4px 12px rgba(16,60,41,0.05);">Lợi ích thiết thực</span>
+        <h2 style="color: var(--green-900); font-size: 3.5rem; margin: 24px 0;">Vì sao gia nhập Remeli?</h2>
       </div>
 
-      <style>
-        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .value-card { padding: 50px 40px; border-radius: 36px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .value-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(16, 60, 41, 0.08); }
-        .value-icon { width: 72px; height: 72px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 32px; box-shadow: 0 12px 24px rgba(0,0,0,0.04); }
-      </style>
-
-      <div class="values-grid reveal">
+      <!-- 3 Benefits Cards Stacked Vertically -->
+      <div style="display: flex; flex-direction: column; gap: 160px; max-width: 900px; margin: 0 auto;" class="reveal">
         
-        <!-- Card 1 -->
-        <div class="value-card" style="background: var(--white); border: 1px solid rgba(107, 195, 121, 0.1);">
-          <div class="value-icon" style="background: var(--green-100);">🌍</div>
-          <h3 style="color: var(--green-900); font-size: 1.5rem; margin-bottom: 16px;">Bảo vệ Môi trường</h3>
-          <p style="color: var(--muted); line-height: 1.6; margin: 0; font-size: 1.05rem;">Mỗi phần ăn được cứu khỏi thùng rác đồng nghĩa với việc giảm thiểu lượng khí thải methane. Cùng nhau, chúng ta đang làm xanh lại bầu không khí của Việt Nam.</p>
+        <!-- Benefit 1 -->
+        <div style="background: var(--white); border-radius: 40px; padding: 80px 48px; text-align: center; box-shadow: 0 16px 40px rgba(16,60,41,0.04); border: 1px solid rgba(107, 195, 121, 0.1);">
+          <div style="width: 100px; height: 100px; background: var(--yellow-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 32px; box-shadow: 0 8px 24px rgba(255,200,67,0.3);">📉</div>
+          <h3 style="color: var(--green-900); font-size: 1.8rem; margin-bottom: 16px; font-weight: 700;">Giảm thiểu lãng phí</h3>
+          <p style="color: var(--muted); font-size: 1.15rem; line-height: 1.8; max-width: 600px; margin: 0 auto;">Không còn nỗi đau phải bỏ đi những mẻ bánh ngon hay nồi canh tâm huyết. Remeli giúp bạn tối ưu hoá 100% nguyên liệu sản xuất mỗi ngày.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="value-card" style="background: var(--yellow-soft);">
-          <div class="value-icon" style="background: var(--white);">🍽️</div>
-          <h3 style="color: var(--green-900); font-size: 1.5rem; margin-bottom: 16px;">Chống Lãng phí</h3>
-          <p style="color: var(--green-900); opacity: 0.9; line-height: 1.6; margin: 0; font-size: 1.05rem;">Chúng tôi tin rằng thức ăn ngon được tạo ra là để thưởng thức. Remeli giúp các nhà hàng tối ưu hoá nguồn nguyên liệu và không để phí phạm công sức đầu bếp.</p>
+        <!-- Benefit 2 -->
+        <div style="background: var(--white); border-radius: 40px; padding: 80px 48px; text-align: center; box-shadow: 0 16px 40px rgba(16,60,41,0.04); border: 1px solid rgba(107, 195, 121, 0.1);">
+          <div style="width: 100px; height: 100px; background: #e0eee4; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 32px; box-shadow: 0 8px 24px rgba(107,195,121,0.3);">💰</div>
+          <h3 style="color: var(--green-900); font-size: 1.8rem; margin-bottom: 16px; font-weight: 700;">Thêm nguồn thu nhập</h3>
+          <p style="color: var(--muted); font-size: 1.15rem; line-height: 1.8; max-width: 600px; margin: 0 auto;">Biến thức ăn thừa thành tiền. Những sản phẩm từng bị lãng quên giờ đây sẽ mang lại doanh thu gia tăng cho cửa hàng của bạn một cách dễ dàng.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="value-card" style="background: var(--green-800);">
-          <div class="value-icon" style="background: var(--green-900);">🤝</div>
-          <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 16px;">Tiết kiệm & Gắn kết</h3>
-          <p style="color: var(--green-100); opacity: 0.9; line-height: 1.6; margin: 0; font-size: 1.05rem;">Người dùng được ăn ngon với mức giá ưu đãi, cửa hàng có thêm thu nhập, và cộng đồng xích lại gần nhau hơn trong một mục tiêu chung vô cùng ý nghĩa.</p>
+        <!-- Benefit 3 -->
+        <div style="background: var(--white); border-radius: 40px; padding: 80px 48px; text-align: center; box-shadow: 0 16px 40px rgba(16,60,41,0.04); border: 1px solid rgba(107, 195, 121, 0.1);">
+          <div style="width: 100px; height: 100px; background: #fffcf2; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 32px; box-shadow: 0 8px 24px rgba(255,200,67,0.3);">🤝</div>
+          <h3 style="color: var(--green-900); font-size: 1.8rem; margin-bottom: 16px; font-weight: 700;">Khách hàng tiềm năng</h3>
+          <p style="color: var(--muted); font-size: 1.15rem; line-height: 1.8; max-width: 600px; margin: 0 auto;">Tiếp cận hàng ngàn người dùng trẻ tuổi, yêu môi trường qua app. Họ đến nhận món và hoàn toàn có thể trở thành khách hàng trung thành của quán.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Quy trình hoạt động cho đối tác -->
+  <section style="padding: 120px 24px; background: var(--white);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 80px;" class="reveal">
+        <span class="eyebrow eyebrow-yellow" style="margin: 0 auto 16px;">Vận hành đơn giản</span>
+        <h2 style="color: var(--green-900); font-size: 3rem; margin: 0;">Chỉ với 3 bước mỗi ngày</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center;" class="reveal">
+        <!-- Step 1 -->
+        <div style="position: relative; padding: 40px 24px;">
+          <div style="width: 80px; height: 80px; background: var(--green-100); color: var(--green-700); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; margin: 0 auto 24px; box-shadow: 0 8px 24px rgba(107,195,121,0.2);">1</div>
+          <h3 style="color: var(--green-900); font-size: 1.5rem; margin-bottom: 16px;">Đóng gói & Cập nhật</h3>
+          <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.7;">Vào cuối ca làm, bạn gom thức ăn dư vào túi mù (Surprise Bag) và lên app cập nhật số lượng có sẵn chỉ trong 5 giây.</p>
+        </div>
+        <!-- Step 2 -->
+        <div style="position: relative; padding: 40px 24px;">
+          <div style="width: 80px; height: 80px; background: var(--yellow-soft); color: var(--green-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; margin: 0 auto 24px; box-shadow: 0 8px 24px rgba(255,200,67,0.3);">2</div>
+          <h3 style="color: var(--green-900); font-size: 1.5rem; margin-bottom: 16px;">Khách đặt qua App</h3>
+          <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.7;">Người dùng trong khu vực sẽ nhận được thông báo, tiến hành thanh toán giữ chỗ trực tiếp trên ứng dụng Remeli.</p>
+        </div>
+        <!-- Step 3 -->
+        <div style="position: relative; padding: 40px 24px;">
+          <div style="width: 80px; height: 80px; background: var(--green-100); color: var(--green-700); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; margin: 0 auto 24px; box-shadow: 0 8px 24px rgba(107,195,121,0.2);">3</div>
+          <h3 style="color: var(--green-900); font-size: 1.5rem; margin-bottom: 16px;">Giao món tận tay</h3>
+          <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.7;">Khách ghé tiệm theo khung giờ quy định, bạn chỉ cần quét mã QR xác nhận và giao túi thức ăn. Tiền sẽ tự động cộng vào ví!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics / Trust Section -->
+  <section style="padding: 100px 24px; background: #fafdfb; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 40px; text-align: center;" class="reveal">
+      <div>
+        <div style="font-family: var(--display-font); font-size: 3.5rem; color: var(--green-700); margin-bottom: 8px;">0đ</div>
+        <div style="color: var(--green-900); font-size: 1.15rem; font-weight: 600;">Phí khởi tạo ban đầu</div>
+      </div>
+      <div>
+        <div style="font-family: var(--display-font); font-size: 3.5rem; color: var(--green-700); margin-bottom: 8px;">+30%</div>
+        <div style="color: var(--green-900); font-size: 1.15rem; font-weight: 600;">Doanh thu ước tính tăng thêm</div>
+      </div>
+      <div>
+        <div style="font-family: var(--display-font); font-size: 3.5rem; color: var(--green-700); margin-bottom: 8px;">Hỗ trợ</div>
+        <div style="color: var(--green-900); font-size: 1.15rem; font-weight: 600;">Marketing độc quyền 0đ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Massive CTA Section -->
+  <section style="padding: 160px 24px; background: var(--white);">
+    <div style="max-width: 1000px; margin: 0 auto;" class="reveal">
+      <div style="background: var(--green-900); border-radius: 48px; padding: 100px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 32px 80px rgba(16, 60, 41, 0.15);">
+        <div style="position: absolute; top: -50%; left: -20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,200,67,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+        
+        <h2 style="color: var(--white); font-size: 3.6rem; font-family: var(--display-font); line-height: 1.2; margin-bottom: 24px; position: relative; z-index: 2;">Bắt đầu hành trình<br/>chống lãng phí cùng Remeli</h2>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.3rem; margin: 0 auto 48px; max-width: 600px; line-height: 1.7; position: relative; z-index: 2;">Tham gia hoàn toàn miễn phí. Hàng ngàn khách hàng đang chờ để "giải cứu" những món ngon của bạn mỗi ngày.</p>
+        
+        <a href="dang-ki-doanh-nghiep.html" class="btn btn-yellow" style="font-size: 1.3rem; padding: 24px 56px; border-radius: 999px; position: relative; z-index: 2;">Đăng ký cửa hàng ngay</a>
       </div>
     </div>
   </section>
