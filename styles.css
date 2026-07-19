@@ -1597,8 +1597,9 @@ details p {
 .site-footer {
   display: grid;
   grid-template-columns: 0.9fr 1.6fr;
-  gap: 70px;
-  padding: 64px max(24px, calc((100vw - var(--max)) / 2)) 34px;
+  gap: 40px;
+  padding: 40px max(24px, calc((100vw - var(--max)) / 2)) 24px;
+  font-size: 0.88rem;
   color: var(--white);
   background:
     radial-gradient(circle at 90% 15%, rgba(107, 195, 121, 0.18), transparent 25%),
@@ -1741,18 +1742,18 @@ details p {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 38px;
+  gap: 24px;
 }
 
 .footer-links h3 {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   color: var(--white);
 }
 
 .footer-links a,
 .footer-links span {
   display: block;
-  margin: 10px 0;
+  margin: 8px 0;
   color: rgba(255, 255, 255, 0.73);
 }
 

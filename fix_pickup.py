@@ -1,6 +1,5 @@
 from html.parser import HTMLParser
 import re
-import glob
 
 class Translater(HTMLParser):
     def __init__(self, replacements):
@@ -62,13 +61,19 @@ def process(filename, replacements):
             f.write(new_content)
         print(f"Updated {filename}")
 
-footer = [
-    ("Dành cho Doanh nghiệp", "megaForBusiness"),
-    ("Vì sao gia nhập Remeli", "megaWhyJoin"),
-    ("Đăng ký doanh nghiệp", "megaRegisterBusiness"),
-    ("Doanh nghiệp", "navMerchant")
+pickup = [
+    ("Trải nghiệm nhận hàng", "pickupPageTitle"),
+    ("Hướng dẫn", "pickupHeroTitle1"),
+    ("Pick up", "pickupHeroTitle2"),
+    ("Thực hiện 4 bước đơn giản sau để nhận ngay phần ăn tuyệt hảo tại cửa hàng.", "pickupHeroDesc"),
+    ("Đặt & Thanh toán", "pickupStep1"),
+    ("Click chọn phần ăn bạn yêu thích và tiến hành thanh toán an toàn ngay trên ứng dụng.", "pickupStep1Desc"),
+    ("Xem địa chỉ & Hướng dẫn", "pickupStep2"),
+    ("Hệ thống sẽ hiện chi tiết địa chỉ cùng các hướng dẫn nhận món trực tiếp từ cửa hàng.", "pickupStep2Desc"),
+    ("Mở mã QR trên App", "pickupStep3"),
+    ("Khi đến cửa hàng, bạn chỉ cần mở ứng dụng và chuẩn bị sẵn mã QR xác nhận đơn hàng.", "pickupStep3Desc"),
+    ("Scan QR & Nhận món", "pickupStep4"),
+    ("Đưa mã QR cho nhân viên cửa hàng scan để hoàn tất việc xác nhận và mang món ngon về.", "pickupStep4Desc")
 ]
 
-for file in glob.glob("*.html"):
-    process(file, footer)
-
+process('lam-sao-de-pick-up.html', pickup)
