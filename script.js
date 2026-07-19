@@ -1068,3 +1068,58 @@ updateHeader();
 updateActiveNav();
 updateHeroParallax();
 updateFoodFlight();
+// Number counter animation
+const animateNumber = (el, startTime = performance.now()) => {
+  const targetText = el.getAttribute('data-target-text') || el.innerText;
+  if (!el.getAttribute('data-target-text')) {
+    el.setAttribute('data-target-text', targetText);
+  }
+  
+  const match = targetText.match(/^([\d.]+)(.*)$/);
+  if (!match) return;
+  
+  const targetNum = parseFloat(match[1]);
+  const suffix = match[2];
+  const isFloat = targetText.includes('.');
+  
+  const duration = 1300;
+  
+  const update = (currentTime) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.max(0, Math.min(elapsed / duration, 1));
+    
+    // easeOutExpo
+    const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    const currentNum = targetNum * ease;
+    
+    if (isFloat) {
+      el.innerText = currentNum.toFixed(1) + suffix;
+    } else {
+      el.innerText = Math.floor(currentNum) + suffix;
+    }
+    
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.innerText = targetText;
+    }
+  };
+  
+  requestAnimationFrame(update);
+};
+
+const numObserver = new IntersectionObserver((entries, observer) => {
+  const now = performance.now();
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateNumber(entry.target, now);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+const metricKeys = ['benefitSaveTitle', 'benefitLocalTitle', 'benefitWasteTitle', 'impactMetric1', 'impactMetric2', 'impactMetric3'];
+metricKeys.forEach(key => {
+  const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
+  elements.forEach(el => numObserver.observe(el));
+});
