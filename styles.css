@@ -987,7 +987,9 @@ h3 {
 
 .impact-card h3 {
   margin: 12px 0 8px;
-  font-size: 1.8rem;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  word-break: break-word;
 }
 
 .impact-card p {
